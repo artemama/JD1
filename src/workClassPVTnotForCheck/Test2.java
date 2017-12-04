@@ -1,4 +1,4 @@
-package workClassPVT;
+package workClassPVTnotForCheck;
 
 public class Test2 {
 	public Test2() {

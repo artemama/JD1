@@ -1,4 +1,4 @@
-package com.intexsoft.test13;
+package com.intexsoft.task13;
 
 public class SimpleNumberBrake {
 

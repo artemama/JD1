@@ -1,4 +1,4 @@
-package packtestNotCheck;
+package packTestNotForCheck;
 
 import java.util.Random;
 

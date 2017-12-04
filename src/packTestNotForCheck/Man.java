@@ -1,4 +1,4 @@
-package packtestNotCheck;
+package packTestNotForCheck;
 
 public class Man {
     private int hairLength; // свойство класса
