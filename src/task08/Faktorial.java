@@ -3,22 +3,14 @@ package task08;
 public class Faktorial {
 
 	public static void main(String[] args) {
+		long faktorial = 1;
+		int i = 1;
+		while (i <= 20) {
+			faktorial *= i;
+			i++;
+		}
 
-		double sr = 0;
-		double factorial = 1;
-		int n = 0;
-		int x = (int) (Math.random() * 20);
-		while (x != 0) {
-			factorial *= x;
-			n++;
-			x = (int) (Math.random() * 20);
-		}
-		if (n != 0) {
-			sr = factorial * n;
-		} else {
-			sr = 0;
-		}
-		System.out.println("Факториал:" + sr);
+		System.out.println("Факториал:" + faktorial);
 
 	}
 
