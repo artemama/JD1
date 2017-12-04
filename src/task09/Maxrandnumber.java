@@ -1,5 +1,8 @@
 package task09;
 
+
+
+
 public class Maxrandnumber {
 
 	public static void main(String[] args) {
