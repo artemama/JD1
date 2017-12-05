@@ -1,9 +1,8 @@
 package com.intexsoft.task10;
 
-import java.util.Arrays;
 import java.util.Random;
 
-public class SumNumMi {
+public class SumNumRand {
 
 	public static void main(String[] args) {
 		Random randnum = new Random();
