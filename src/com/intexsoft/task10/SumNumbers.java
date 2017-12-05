@@ -16,7 +16,7 @@ public class SumNumbers {
 		} else if (number == 10) {
 			sum = sum + 1;
 		}
-		System.out.println("s=" + sum);
+		System.out.println("сумма=" + sum);
 
 	}
 

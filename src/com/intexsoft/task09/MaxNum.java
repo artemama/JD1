@@ -2,7 +2,7 @@ package com.intexsoft.task09;
 
 import java.util.Random;
 
-public class MaxNumMih {
+public class MaxNum {
 
 	public static void main(String[] args) {
 

@@ -3,7 +3,7 @@ package com.intexsoft.task09;
 
 
 
-public class Maxrandnumber {
+public class MaxRandNumber {
 
 	public static void main(String[] args) {
 

@@ -10,7 +10,9 @@ public class Rectangle {
 		// надо найти длину диагонали прямоугольника по теореме пифагора
 
 		r = ((Math.sqrt(a * a + b * b)) / 2);
-		System.out.println(r + " Радиус круга");
+		System.out.println("При размерах  прямоугольника - " + a + " на " + b);
+		System.out.println("Радиус круга должен быть не менее " + r);
+		
 	}
 
 }
