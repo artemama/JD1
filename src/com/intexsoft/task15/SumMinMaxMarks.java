@@ -12,8 +12,8 @@ public class SumMinMaxMarks {
 		}
 		int nrMaxMarkInMass = 0;
 		int nrMinMarkInMass = 0;
-		int maxMark = 0;
-		int minMark = 10;
+		int maxMark = marks[0];
+		int minMark = marks[0];
 
 		for (int i = 0; i < marks.length; i++) {
 			if (minMark > marks[i])
