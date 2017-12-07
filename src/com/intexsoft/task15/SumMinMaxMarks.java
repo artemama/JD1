@@ -12,17 +12,27 @@ public class SumMinMaxMarks {
 		}
 		int nrMaxMarkInMass = 0;
 		int nrMinMarkInMass = 0;
-		int maxMark = marks[0];
-		int minMark = marks[0];
+		int maxMark = 0;
+		int minMark = 0;
 
 		for (int i = 0; i < marks.length; i++) {
-			if (minMark > marks[i])
-				minMark = i;
-			if (minMark == marks[i]) {
-				nrMinMarkInMass = i;
+			if (minMark < marks[i]) {
+				minMark = marks[i];
+			//	nrMinMarkInMass = i;
+			}
+			if (maxMark > marks[i]) {
+				maxMark = marks[i];
+				nrMaxMarkInMass = i;
+			}
+			System.out.println("Мaks оценка =" + maxMark);
+			System.out.println("Минимальная оценка =" + minMark);
+		}
+
+		/*	if (minMark == marks[i]) {
+		//		nrMinMarkInMass = i;
 				System.out.println("Минимальная оценка =" + minMark);
 			}
-		}
+		
 
 		for (int j = 0; j < marks.length; j++) {
 			if (maxMark < marks[j])
@@ -30,7 +40,7 @@ public class SumMinMaxMarks {
 			if (maxMark == marks[j]) {
 				nrMaxMarkInMass = j;
 			}
-		}
+		}*/
 
 		System.out.println("Максимальная оценка =" + maxMark);
 
