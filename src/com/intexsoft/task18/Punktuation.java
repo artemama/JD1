@@ -3,14 +3,14 @@ package com.intexsoft.task18;
 public class Punktuation {
 
 	public static void main(String[] args) {
-		String str = "“естова€, строка, с несколькими,, зап€тыми! разными?, другими. ??знаками:!???????????";
+		String str = "“естова€, строка, с::;;; несколькими,, зап€тыми! разными?, другими. ??знаками:!???????????";
 		int n = 0;
 		int n1 = 0;
-		int n2 = 0;
+		// int n2 = 0;
 		int p = 0;
-		int q = 0;  //  ?
-		int е = 0;  //  !
-		int с = 0;  //  :
+		int q = 0; // ?
+		// int е = 0; // !
+		// int с = 0; // :
 		while (p != -1) {
 			p = str.indexOf(',', p);
 			if (p != -1) {
@@ -23,28 +23,15 @@ public class Punktuation {
 					q++;
 					n1++;
 				}
+			}
+			// и т.д. можно все перечилить
 		}
-		}
-		System.out.println("” нас есть " + n + " зап€тых, "+  n1 + " вопросов");
+		System.out.println("” нас есть " + n + " зап€тых, " + n1 + " вопросов");
+		// второй вариант
 
-	
+		int before = str.length();
+		int after = str.replaceAll("[-.?!)(,:]", "").length();
+		System.out.println(" оличество знаков препинани€ в тексте: " + (before - after));
+
 	}
 }
-
-/*
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
- 
-
-
-public static void main(String[] args) {
- 
-        String text = "ƒоброго времени суток. ѕомогите, пожалуйста, с программой. Ќеобходимо подсчитать количество знаков препинани€ вне главной диагонали матрицы.";
-        int before = text.length();
-        int after = text.replaceAll("[,.]", "").length();
-        System.out.println(" оличество знаков препинани€ в тексте: " + (before - after));
- 
-    }
-}
-*/
