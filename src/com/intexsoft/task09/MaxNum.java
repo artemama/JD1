@@ -8,9 +8,8 @@ public class MaxNum {
 
 		Random rand = new Random();
 		int max = 0;
-		int cicle = 0;
 		for (int i = 0; i < 20; i++) {
-			cicle = rand.nextInt(50);
+			int cicle = rand.nextInt(50);
 			if (max < cicle) {
 				max = cicle;
 			}

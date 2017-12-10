@@ -5,14 +5,21 @@ public class Rectangle {
 	public static void main(String[] args) {
 		int a = 5;
 		int b = 8;
-		double r;
+		double r = 5;
 
 		// надо найти длину диагонали прямоугольника по теореме пифагора
 
-		r = ((Math.sqrt(a * a + b * b)) / 2);
+		double res = ((Math.sqrt(a * a + b * b)) / 2);
 		System.out.println("При размерах  прямоугольника - " + a + " на " + b);
-		System.out.println("Радиус круга должен быть не менее " + r);
-		
+		System.out.println("Радиус круга должен быть не менее " + res);
+		if (res <= r) {
+			System.out.println("Закроет");
+
+		} else {
+			System.out.println("Не закроет");
+
+		}
+
 	}
 
 }

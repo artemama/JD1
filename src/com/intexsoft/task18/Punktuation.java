@@ -4,7 +4,7 @@ public class Punktuation {
 
 	public static void main(String[] args) {
 		String str = "Тестовая, строка, с::;;; несколькими,, запятыми! разными?, другими. ??знаками:!???????????";
-		int n = 0;
+		/*int n = 0;
 		int n1 = 0;
 		// int n2 = 0;
 		int p = 0;
@@ -26,8 +26,9 @@ public class Punktuation {
 			}
 			// и т.д. можно все перечилить
 		}
-		System.out.println("У нас есть " + n + " запятых, " + n1 + " вопросов");
-		// второй вариант
+		System.out.println("У нас есть " + n + " запятых, " + n1 + " вопросов");*/
+				
+		// второй вариант!!!!!!!!!!!!!
 
 		int before = str.length();
 		int after = str.replaceAll("[-.?!)(,:]", "").length();

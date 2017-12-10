@@ -18,12 +18,12 @@ public class MaxMarkNumber {
 				maxMark = marks[i];
 		}
 		System.out.println("Максимальная оценка = " + maxMark);
-		
+
 		for (int i = 0; i < marks.length; i++) {
 			if (maxMark == marks[i])
 				nrNumberInMass = i;
 		}
-	
+
 		System.out.println("Номер ученика - " + nrNumberInMass);
 
 	}

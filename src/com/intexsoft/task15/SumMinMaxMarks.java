@@ -40,20 +40,19 @@ public class SumMinMaxMarks {
 		}
 
 		System.out.println("Номер ученика с минимальным значением - " + nrMinMarkInMass);
-		
+
 		int sum = 0;
 		if (nrMaxMarkInMass > nrMinMarkInMass) {
 			for (int i = nrMinMarkInMass; i < nrMaxMarkInMass; i++) {
-				
+
 				sum += marks[i];
 			}
-		} else  
+		} else
 			for (int i = nrMaxMarkInMass; i < nrMinMarkInMass; i++) {
-				sum += marks[i];	
+				sum += marks[i];
 			}
 		System.out.println("Сумма - " + sum);
 
-		}
+	}
 
-			
 }
