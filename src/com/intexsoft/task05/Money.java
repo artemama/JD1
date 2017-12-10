@@ -7,11 +7,11 @@ public class Money {
 		int end;
 		end = money % 10;
 		if (end == 1) {
-			System.out.println(money + " рубль");
+			System.out.println(money + " rubl");
 		} else if (end == 2 || end == 3 || end == 4) {
-			System.out.println(money + " рубля");
+			System.out.println(money + " rublia");
 		} else if (end == 5 || end == 6 || end == 7 || end == 8 || end == 9 || end == 0) {
-			System.out.println(money + " рублей");
+			System.out.println(money + " rubls"); //sorry for some translite
 		}
 	}
 }
