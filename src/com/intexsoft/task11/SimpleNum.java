@@ -11,9 +11,9 @@ public class SimpleNum {
 			}
 		}
 		if (temp == 0) {
-			System.out.println("Число простое");
+			System.out.println("Simple number");
 		} else {
-			System.out.println("Составное число");
+			System.out.println("A composite number");
 		}
 	}
 

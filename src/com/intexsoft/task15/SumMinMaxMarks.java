@@ -8,7 +8,7 @@ public class SumMinMaxMarks {
 			marks[i] = (int) (Math.random() * 10 + 1);
 		}
 		for (int i = 0; i < marks.length; i++) {
-			System.out.println("Ученик №" + i + " = " + marks[i]);
+			System.out.println("Pupil №" + i + " = " + marks[i]);
 		}
 
 		int nrMaxMarkInMass = 0;
@@ -18,20 +18,20 @@ public class SumMinMaxMarks {
 			if (maxMark < marks[i])
 				maxMark = marks[i];
 		}
-		System.out.println("Максимальная оценка = " + maxMark);
+		System.out.println("Max mark = " + maxMark);
 
 		for (int i = 0; i < marks.length; i++) {
 			if (maxMark == marks[i])
 				nrMaxMarkInMass = i;
 		}
 
-		System.out.println("Номер ученика с максимальным значением - " + nrMaxMarkInMass);
+		System.out.println("Pupil number with max mark - " + nrMaxMarkInMass);
 		int minMark = 10;
 		for (int i = 0; i < marks.length; i++) {
 			if (minMark > marks[i])
 				minMark = marks[i];
 		}
-		System.out.println("Минимальная оценка = " + minMark);
+		System.out.println("Min mark = " + minMark);
 
 		for (int i = 0; i < marks.length; i++) {
 
@@ -39,7 +39,7 @@ public class SumMinMaxMarks {
 				nrMinMarkInMass = i;
 		}
 
-		System.out.println("Номер ученика с минимальным значением - " + nrMinMarkInMass);
+		System.out.println("Pupil number with min mark - " + nrMinMarkInMass);
 
 		int sum = 0;
 		if (nrMaxMarkInMass > nrMinMarkInMass) {
@@ -51,7 +51,7 @@ public class SumMinMaxMarks {
 			for (int i = nrMaxMarkInMass; i < nrMinMarkInMass; i++) {
 				sum += marks[i];
 			}
-		System.out.println("Сумма - " + sum);
+		System.out.println("Sum - " + sum);
 
 	}
 

@@ -9,12 +9,12 @@ public class SimpleNumberBrake {
 		for (int i = 2; i < number + 1; i++) {
 			temp = number % i;
 			if (temp == 0 && i != number) {
-				System.out.println(number + " - Составное число");
+				System.out.println(number + " - a composite number");
 				break;
 
 			} else {
 				if (temp == 0 && i == number) {
-					System.out.println(number + " - Простое число");
+					System.out.println(number + " - Simple number");
 
 				}
 

@@ -9,7 +9,7 @@ public class LettersInText {
 		String[] res = str.split("\\b");
 		int n = res.length;
 		
-		System.out.println("Количество слов = " + n/2);
+		System.out.println("The number of words = " + n/2);
 	}
 
 }

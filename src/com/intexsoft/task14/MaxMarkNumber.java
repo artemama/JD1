@@ -8,7 +8,7 @@ public class MaxMarkNumber {
 			marks[i] = (int) (Math.random() * 10 + 1);
 		}
 		for (int i = 0; i < marks.length; i++) {
-			System.out.println("Ученик №" + i + " = " + marks[i]);
+			System.out.println("Pupil №" + i + " = " + marks[i]);
 		}
 
 		int nrNumberInMass = 0;
@@ -17,14 +17,14 @@ public class MaxMarkNumber {
 			if (maxMark < marks[i])
 				maxMark = marks[i];
 		}
-		System.out.println("Максимальная оценка = " + maxMark);
+		System.out.println("Max mark = " + maxMark);
 
 		for (int i = 0; i < marks.length; i++) {
 			if (maxMark == marks[i])
 				nrNumberInMass = i;
 		}
 
-		System.out.println("Номер ученика - " + nrNumberInMass);
+		System.out.println("Pupil number - " + nrNumberInMass);
 
 	}
 
