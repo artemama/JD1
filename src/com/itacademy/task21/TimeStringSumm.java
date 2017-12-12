@@ -11,7 +11,7 @@ public class TimeStringSumm {
 		}
 		long timeSpent = System.currentTimeMillis();
 		long timeSpentFinal = timeSpent - startTime;
-		System.out.println("программа выполнялась " + timeSpentFinal * 1000 + " миллисекунд");
+		System.out.println("the program was implemented " + timeSpentFinal * 1000 + " milliseconds");
 
 		long startTime1 = System.currentTimeMillis();
 		StringBuilder strbild = new StringBuilder();
@@ -20,7 +20,7 @@ public class TimeStringSumm {
 		}
 		long timeSpent1 = System.currentTimeMillis();
 		long timeSpentFinal1 = timeSpent1 - startTime1;
-		System.out.println("программа co StringBuilder выполнялась " + timeSpentFinal1 + " миллисекунд(ы)");
+		System.out.println("the program was run StringBuilder " + timeSpentFinal1 + " milliseconds");
 	}
 
 }

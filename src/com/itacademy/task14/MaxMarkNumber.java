@@ -14,14 +14,16 @@ public class MaxMarkNumber {
 		int nrNumberInMass = 0;
 		int maxMark = 0;
 		for (int i = 0; i < marks.length; i++) {
-			if (maxMark < marks[i])
+			if (maxMark < marks[i]) {
 				maxMark = marks[i];
-		}
+			}
+			}
 		System.out.println("Max mark = " + maxMark);
 
 		for (int i = 0; i < marks.length; i++) {
-			if (maxMark == marks[i])
+			if (maxMark == marks[i]) {
 				nrNumberInMass = i;
+			}
 		}
 
 		System.out.println("Pupil number - " + nrNumberInMass);
