@@ -5,7 +5,7 @@ abstract class Electronics {
 	abstract void cleaning();
 	abstract void washing();
 	void play() {
-		System.out.println("Play pleasure music");
+		System.out.println(" и по русски Play pleasure music");
 	};
 		
 	}
