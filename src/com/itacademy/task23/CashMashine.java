@@ -14,7 +14,7 @@ public class CashMashine {
 		x20 += addnote20;
 	}
 
-	static void askMoney(int requestCash) {
+	void askMoney(int requestCash) {
 		boolean firstAnswer;
 		cash = requestCash;
 		if (requestCash % 10 != 0) {
@@ -33,18 +33,19 @@ public class CashMashine {
 		}
 
 	}
-	static void reqestMoney() {
-	int[] nominal = {20, 50, 100}; //the array of available notes
-	int[] count = new int[nominal.length]; //the number of banknotes to give
-	int index = nominal.length - 1;
-	 
-	while (index != -1) {
-	    count[index] = cash / nominal[index];
-	    cash %= nominal[index];
-	    index--;
-	}
-	for (int i = 0; i < count.length; i++) {
-		   System.out.printf("Íîìèíàë â %d ðóá. = %d øò.\n", nominal[i], count[i]);
+
+	void reqestMoney() {
+		int[] nominal = { 20, 50, 100 }; // the array of available notes
+		int[] count = new int[nominal.length]; // the number of banknotes to give
+		int index = nominal.length - 1;
+
+		while (index != -1) {
+			count[index] = cash / nominal[index];
+			cash %= nominal[index];
+			index--;
+		}
+		for (int i = 0; i < count.length; i++) {
+			System.out.printf("ÐÐ¾Ð¼Ð¸Ð½Ð°Ð» Ð² %d Ñ€ÑƒÐ±. = %d ÑˆÑ‚.\n", nominal[i], count[i]);
 		}
 	}
 }

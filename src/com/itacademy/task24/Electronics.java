@@ -2,10 +2,16 @@ package com.itacademy.task24;
 
 abstract class Electronics {
 	private String name;
-	abstract void cleaning();
-	abstract void washing();
+	String thStringname = name;
+	void cleaning() {
+	}
+	void washing() {
+	}
 	void play() {
-		System.out.println(" и по русски Play pleasure music");
+		System.out.println("Play pleasure music");
+	}
+	void on(Object On) {
+		
 	};
 		
 	}
