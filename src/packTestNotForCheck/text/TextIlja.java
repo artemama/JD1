@@ -10,7 +10,7 @@ public class TextIlja {
 	public static void main(String[] args) {
 		String str = "Словарь (dictionary) – это структура данных, позволяющая хранить информацию в виде комбинации “ключ” – “значение” (key – value). То есть, с каким либо значением (value) мы ассоциируем ключ (это может быть: id, термин и т. д.) и эту пару заносим в словарь. Обращение к элементу словаря, удаление, поиск по словарю производится по ключу. С помощью данной структуры, например, удобно организовать телефонный справочник, где имени (key) соответствует номер телефона (value).";
 
-		String[] words = str.toLowerCase().split("[\\\\p{Punct}\\\\s]+");
+		String[] words = str.toLowerCase().split("\\W+");
 		List<String> dictionary = new ArrayList<String>();
 		for (String string : words) {
 			dictionary.add(string);
