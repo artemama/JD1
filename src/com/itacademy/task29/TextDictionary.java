@@ -27,10 +27,11 @@ public class TextDictionary {
 		Map<String, Integer> hashMap = new HashMap<String, Integer>();
 		for (int i = 0; i < dictionary.size(); i++) {
 
-			if (hashMap.containsKey(dictionary.get(i))) {
-				hashMap.put(dictionary.get(i), hashMap.get(dictionary.get(i)) + 1);
+			String string = dictionary.get(i);
+			if (hashMap.containsKey(string)) {
+				hashMap.put(string, hashMap.get(string) + 1);
 			} else {
-				hashMap.put(dictionary.get(i), 1);
+				hashMap.put(string, 1);
 			}
 		}
 
