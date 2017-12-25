@@ -3,7 +3,7 @@ package com.itacademy.task21;
 public class TimeStringSumm {
 
 	public static void main(String[] args) {
-		String str = "В стандартную библиотеку Java входит пакет, специально предназначенный для работы с регулярными выражениями — java.util.regex.";
+		String str = "РџСЂРѕРґРІРёР¶РµРЅРёРµ РјРµРЅСЏРµС‚СЃСЏ Рё СЃС‚Р°СЂС‹Рµ РјРµС…Р°РЅРёРєРё СЃРєРѕСЂРѕ РїРµСЂРµСЃС‚Р°РЅСѓС‚ РґР°РІР°С‚СЊ СЌС„С„РµРєС‚. Р’СЂРµРјСЏ РїРµСЂРµРјРµРЅ РѕС‚РєСЂС‹РІР°РµС‚ РЅРѕРІС‹Рµ РґРѕСЂРѕРіРё.";
 		long startTime = System.currentTimeMillis();
 
 		for (int i = 0; i < 20; i++) {
