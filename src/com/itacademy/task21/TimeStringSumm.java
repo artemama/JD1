@@ -3,7 +3,7 @@ package com.itacademy.task21;
 public class TimeStringSumm {
 
 	public static void main(String[] args) {
-		String str = "Продвижение меняется и старые механики скоро перестанут давать эффект. Время перемен открывает новые дороги.";
+		String str = " Продвижение меняется и старые механики скоро перестанут давать эффект. Время перемен открывает новые дороги.";
 		long startTime = System.nanoTime();
 
 		for (int i = 0; i < 20; i++) {
