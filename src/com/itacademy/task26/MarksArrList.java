@@ -1,10 +1,11 @@
 package com.itacademy.task26;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MarksArrList {
 	public static void main(String[] args) {
-		int pupils = 10;
+		int pupils = 20;
 		ArrayList<Integer> marks = new ArrayList<Integer>(pupils);
 		for (int i = 0; i < pupils; i++) {
 			int x = (int) (Math.random() * 10 + 1);
@@ -12,12 +13,20 @@ public class MarksArrList {
 		}
 		System.out.println(marks);
 		int badmark = 3;
-		for (int i = 0; i < marks.size(); i++) {
-			if (marks.get(i) <= badmark) {
-				marks.remove(i);
+		for (Iterator<Integer> iterator = marks.iterator(); iterator.hasNext();) {
+			if (iterator.next() <= badmark) {
+				iterator.remove();
 
 			}
+
 		}
+
+		/*
+		 * for (int i = 0; i < marks.size(); i++) { if (marks.get(i) <= badmark) {
+		 * marks.remove(i);
+		 * 
+		 * } }
+		 */
 
 		System.out.println(marks);
 
