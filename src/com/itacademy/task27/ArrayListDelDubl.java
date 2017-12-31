@@ -1,6 +1,7 @@
 package com.itacademy.task27;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 //Вариант без использования Set и HeshSet
 public class ArrayListDelDubl {
@@ -12,15 +13,14 @@ public class ArrayListDelDubl {
 			test.add(x);
 		}
 		System.out.println(test);
-		for (int i = 0; i < test.size(); i++) {
-			for (int j = i + 1; j < test.size(); j++) {
-				if (test.get(i).equals(test.get(j))) {
-					test.remove(j);
-					j--;
-				}
-			}
-		}
-		System.out.println("After removing duplicatea:" + test);
+
+		ArrayList<Integer> dellDuble = new ArrayList<>(new HashSet<Integer>(test));
+
+		/*
+		 * for (int i = 0; i < test.size(); i++) { for (int j = i + 1; j < test.size();
+		 * j++) { if (test.get(i).equals(test.get(j))) { test.remove(j); j--; } } }
+		 */
+		System.out.println("After removing duplicatea:" + dellDuble);
 
 	}
 }
