@@ -4,7 +4,7 @@ package workClassPVTnotForCheck.test;
 
 	public enum DayOfWeek {
 		
-		monday("ÏÍ"), tuesday("ÂÒ"), wednesday("ÑĞ"), thursday("×Ò"), friday("ÏÒ"), saturday("ÑÁ"), sunday("ÂÑ");
+		monday("ĞŸĞ½"), tuesday("Ğ’Ñ‚"), wednesday("Ğ¡Ñ€"), thursday("Ğ§Ñ‚"), friday("ĞŸÑ‚"), saturday("Ğ¡Ğ±"), sunday("Ğ’Ñ");
 		private DayOfWeek(String titleRu) {
 			this.titleRu = titleRu;
 		}
