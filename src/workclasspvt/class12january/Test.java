@@ -1,4 +1,4 @@
-package workclasspvtnot.class12january;
+package workclasspvt.class12january;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,10 +15,10 @@ public class Test {
 		}
 
 		while (true) {
-			
+
 			for (int i = 0; i < hourses.size(); i++) {
 				System.out.println("");
-				
+
 			}
 			for (Hourse hourse : hourses) {
 				System.out.println(hourse);

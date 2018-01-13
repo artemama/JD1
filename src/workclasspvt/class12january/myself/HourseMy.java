@@ -1,4 +1,4 @@
-package workclasspvtnot.class12january.myself;
+package workclasspvt.class12january.myself;
 
 import java.util.Random;
 
