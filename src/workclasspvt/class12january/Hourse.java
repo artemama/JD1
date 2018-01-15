@@ -1,4 +1,4 @@
-package workclasspvtnot.class12january;
+package workclasspvt.class12january;
 
 import java.util.Random;
 
