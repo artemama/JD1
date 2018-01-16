@@ -1,4 +1,4 @@
-package workclasspvtnot.class15january;
+package workclasspvt.class15january;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,7 +9,7 @@ package workclasspvt.test;
 			this.titleRu = titleRu;
 		}
 
-		private String titleRu;
+	private String titleRu;
 
 		public String getTtitleRu() {
 			return titleRu;
