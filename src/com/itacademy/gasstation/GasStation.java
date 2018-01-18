@@ -1,21 +1,16 @@
 package com.itacademy.gasstation;
 
-public class GasStation extends Tank{
-	Type fuelType;
+import java.util.List;
+
+public class GasStation {
+
+	private List<GasMark> getValue;
+
+	public List<GasMark> getGetValue() {
+		return getValue;
+	}
 
 	
-	private GasStation(Type fuelType, int value) {
-		super();
-		this.fuelType = fuelType;
-		
-	}
-	@Override
-	protected int getVolume() {
-		return super.getVolume();
-	}
-}
-
-enum Type {
-	gas95, gas92, disel;
+	
 
 }

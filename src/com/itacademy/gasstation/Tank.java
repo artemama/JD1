@@ -1,10 +1,12 @@
 package com.itacademy.gasstation;
 
 public class Tank {
-	final int volume = 1000;
+	private void GasType  () {
+		GasMark.values();
 
-	protected int getVolume() {
-		return volume;
+	}
+	
+	
 	}
 
-}
+
