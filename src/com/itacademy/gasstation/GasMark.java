@@ -6,7 +6,7 @@ public enum GasMark {
 
 	private Integer value;
 
-	protected Integer getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
