@@ -14,7 +14,7 @@ public class Tank {
 		System.out.println("Tank Gas92 = " + mark92.value());
 		System.out.println("Tank Disel = " + markDisel.value());
 		
-		List<E>
+		//List<E>
 
 	}
 
