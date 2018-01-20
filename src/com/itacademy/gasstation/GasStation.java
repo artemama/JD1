@@ -1,16 +1,14 @@
 package com.itacademy.gasstation;
 
-import java.util.List;
-
-public class GasStation {
-
-	private List<GasMark> getValue;
-
-	public List<GasMark> getGetValue() {
-		return getValue;
+public class GasStation extends TankGasStation {
+	
+	public GasStation(GasMark gas, int quantity) {
+		super(gas, quantity);
+	
+		
 	}
-
 	
 	
-
+	
+	
 }
