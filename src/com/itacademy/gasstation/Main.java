@@ -25,8 +25,11 @@ public class Main {
 		while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
 			// create car params(fuel type, quantity)
 			Car car = new Car();
+			GasMark tey = null;
 			// getting fuel type of car
 			// searching if fuel is in tank
+			GasMark.values()[1] = tey;
+			
 			if (car.getFuelType() == 0) {
 				if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
 					tank95.setQantityTank(tank95.getQantityTank() - car.quantity);
