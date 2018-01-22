@@ -1,6 +1,5 @@
 package com.itacademy.gasstation;
 
-import java.util.Arrays;
 
 /*есть 5 бензоколонок. на каждой 3 вида топлива: ДT, АИ-92, АИ-95 (использовать Enum)
 колонки питаются из соответствующих общих резервуаров 3х типов, в каждом по 1000 литров горючего на момент старта
@@ -24,11 +23,9 @@ public class Main {
 
 		while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
 			// create car params(fuel type, quantity)
-			Car car = new Car();
-			GasMark tey = null;
+			Car car = new Car(null);
 			// getting fuel type of car
 			// searching if fuel is in tank
-			GasMark.values()[1] = tey;
 			
 			if (car.getFuelType() == 0) {
 				if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
@@ -57,9 +54,19 @@ public class Main {
 					System.out.println("Извините, не хватает ДТ на заправке");
 				}
 			}
+			try {
+				Thread.sleep(car.quantity*10); //wait sec*litr
+				System.out.println(String.format("Машина заправлятся %s секунд", car.quantity) );
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			
-			
-			break;
+			try {
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 		}
 
 
