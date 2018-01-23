@@ -8,8 +8,5 @@ public class TankGasStation extends Tank {
 		this.fuelType = gas;
 		setQantityTank(quantity);
 	}
-	/*public void setFuelType(GasMark fuelType) {
-		this.fuelType = fuelType;
-	}*/
 
 }

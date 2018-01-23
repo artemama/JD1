@@ -25,7 +25,8 @@ public class Test {
 		new PLBoss(queue, plEmployees).start();
 	}
 
-	private static void startWork(List<? extends Thread> workers) throws InterruptedException {
+	private static void startWork(List<? extends Thread> workers) 
+			throws InterruptedException {
 		for (Thread thread : workers) {
 			thread.start();
 			Thread.sleep(200);

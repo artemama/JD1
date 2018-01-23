@@ -1,5 +1,7 @@
 package com.itacademy.gasstation;
 
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /*есть 5 бензоколонок. на каждой 3 вида топлива: ДT, АИ-92, АИ-95 (использовать Enum)
 колонки питаются из соответствующих общих резервуаров 3х типов, в каждом по 1000 литров горючего на момент старта
@@ -24,9 +26,16 @@ public class Main {
 		while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
 			// create car params(fuel type, quantity)
 			Car car = new Car(null);
+
+			Queue<GasStation> gasColumn = new ConcurrentLinkedQueue<GasStation>();
+			for (int i = 0; i < 5; i++) {
+				
+			}
+			
+
 			// getting fuel type of car
 			// searching if fuel is in tank
-			
+
 			if (car.getFuelType() == 0) {
 				if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
 					tank95.setQantityTank(tank95.getQantityTank() - car.quantity);
@@ -55,22 +64,25 @@ public class Main {
 				}
 			}
 			try {
-				Thread.sleep(car.quantity*10); //wait sec*litr
-				System.out.println(String.format("Машина заправлятся %s секунд", car.quantity) );
+				Thread.sleep(car.quantity * 10); // wait sec*litr
+				System.out.println(String.format("Машина заправлятся %s секунд", car.quantity));
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			
+
 			try {
-				
+
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
 		}
 
-
 	}
+	private static void startWorkColumn() {
+		
+	}
+	
 	// TODO check all types of fuel
 	// TODO multiple threads
 
