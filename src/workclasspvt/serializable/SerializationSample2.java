@@ -1,4 +1,4 @@
-package workclasspvt.class03january.serializable;
+package workclasspvt.serializable;
 
 import java.io.FileInputStream;
 

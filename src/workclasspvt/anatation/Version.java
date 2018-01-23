@@ -1,4 +1,4 @@
-package workclasspvt.class13desemb.anatation;
+package workclasspvt.anatation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package workclasspvt.class17january.Enumerations;
+package workclasspvt.enumerations;
 
 public class DayOfWeekObject {
 

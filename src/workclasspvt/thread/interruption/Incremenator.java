@@ -1,4 +1,4 @@
-package workclasspvt.class10january.interruption;
+package workclasspvt.thread.interruption;
 
 public class Incremenator extends Thread {
 

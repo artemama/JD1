@@ -1,4 +1,4 @@
-package workclasspvt.class10january.synchronization;
+package workclasspvt.thread.synchronization;
 
 public class CounterTester {
     public static void main(final String[] args) throws InterruptedException {

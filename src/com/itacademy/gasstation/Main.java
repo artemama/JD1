@@ -24,65 +24,79 @@ public class Main {
 		TankGasStation tankDisel = new TankGasStation(GasMark.disel, 1000);
 
 		while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
-			// create car params(fuel type, quantity)
-			Car car = new Car(null);
-
-			Queue<GasStation> gasColumn = new ConcurrentLinkedQueue<GasStation>();
+			// create car // - params (fuel type, quantity) - in class
+			/* Car car = new Car(null); */
 			for (int i = 0; i < 5; i++) {
-				
-			}
-			
+				Car car = new Car();
+				car.start(); // start thread
 
-			// getting fuel type of car
-			// searching if fuel is in tank
+				/*
+				 * Queue<GasStation> gasColumn; //= new ConcurrentLinkedQueue<GasStation>(); for
+				 * (int i = 0; i < 5; i++) { Queue<GasStation> gasColumn1 = new
+				 * ConcurrentLinkedQueue<GasStation>(); }
+				 */
 
-			if (car.getFuelType() == 0) {
-				if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
-					tank95.setQantityTank(tank95.getQantityTank() - car.quantity);
-					System.out.println("95 бензина в цистерне осталось - " + tank95.getQantityTank());
-				} else {
-					System.out.println("Извините, не хватает 95 бензина на заправке");
+				// getting fuel type of car
+				// searching if fuel is in tank
+
+				if (car.getFuelType() == 0) {
+					if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
+						tank95.setQantityTank(tank95.getQantityTank() - car.quantity);
+						System.out.println("95 бензина в цистерне осталось - " + tank95.getQantityTank());
+					} else {
+						System.out.println("Извините, не хватает 95 бензина на заправке");
+					}
 				}
-			}
-			if (car.getFuelType() == 1) {
-				if (car.quantity < tank92.getQantityTank() && tank92.getQantityTank() - car.quantity >= 0) {
-					tank92.setQantityTank(tank92.getQantityTank() - car.quantity);
-					System.out.println("92 бензина в цистерне осталось - " + tank92.getQantityTank());
+				if (car.getFuelType() == 1) {
+					if (car.quantity < tank92.getQantityTank() && tank92.getQantityTank() - car.quantity >= 0) {
+						tank92.setQantityTank(tank92.getQantityTank() - car.quantity);
+						System.out.println("92 бензина в цистерне осталось - " + tank92.getQantityTank());
 
-				} else {
-					System.out.println("Извините, не хватает 92 бензина на заправке");
+					} else {
+						System.out.println("Извините, не хватает 92 бензина на заправке");
+					}
 				}
-			}
 
-			if (car.getFuelType() == 2) {
-				if (car.quantity < tankDisel.getQantityTank() && tankDisel.getQantityTank() - car.quantity >= 0) {
-					tankDisel.setQantityTank(tankDisel.getQantityTank() - car.quantity);
-					System.out.println("ДТ в цистерне осталось - " + tankDisel.getQantityTank());
+				if (car.getFuelType() == 2) {
+					if (car.quantity < tankDisel.getQantityTank() && tankDisel.getQantityTank() - car.quantity >= 0) {
+						tankDisel.setQantityTank(tankDisel.getQantityTank() - car.quantity);
+						System.out.println("ДТ в цистерне осталось - " + tankDisel.getQantityTank());
 
-				} else {
-					System.out.println("Извините, не хватает ДТ на заправке");
+					} else {
+						System.out.println("Извините, не хватает ДТ на заправке");
+					}
 				}
-			}
-			try {
-				Thread.sleep(car.quantity * 10); // wait sec*litr
-				System.out.println(String.format("Машина заправлятся %s секунд", car.quantity));
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+				try {
+					Thread.sleep(car.quantity * 10); // wait sec*litr
+					if (tank92.getQantityTank() <= 0 && tank92.getQantityTank() <= 0
+							&& tankDisel.getQantityTank() <= 0) {
 
-			try {
+						System.out.println("На заправках коничлось топливо, едьте на другую заправку");
 
-			} catch (Exception e) {
-				// TODO: handle exception
+					} else {
+						System.out.println(String.format("Машина заправлятся %s л., сек.", car.quantity));
+
+					}
+
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+				try {
+
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
 			}
 		}
 
 	}
+
 	private static void startWorkColumn() {
-		
+
 	}
-	
+
 	// TODO check all types of fuel
 	// TODO multiple threads
 

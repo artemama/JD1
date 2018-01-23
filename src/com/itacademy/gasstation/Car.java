@@ -23,7 +23,16 @@ public class Car extends Thread{
 		System.out.println(String.format("Создан " + numberCar));
 
 	}
+		public Car() {
+		// TODO Auto-generated constructor stub
+	}
 
+		public void run() {
+			
+			System.out.println(String.format(numberCar+ " заехал на колонку"));
+			
+		}
+	
 	public Queue<Car> getQueue() {
 		return queue;
 	}

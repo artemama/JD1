@@ -1,12 +1,12 @@
-package workclasspvt.class12january.customs;
+package workclasspvt.customs;
 
 import java.util.Queue;
 
-public class PLEmployee extends AbstractEmployee {
+public class BYEmployee extends AbstractEmployee {
 
 	private int carCounter;
 
-	public PLEmployee(Queue<Car> queue) {
+	public BYEmployee(Queue<Car> queue) {
 		super(queue);
 	}
 
@@ -14,11 +14,13 @@ public class PLEmployee extends AbstractEmployee {
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(15000);
+				Thread.sleep(getRandomDelaySeconds(10, 20));
 			} catch (InterruptedException e) {
 				goHome();
 				return;
 			}
+			
+			
 			if (Thread.interrupted()) {
 				goHome();
 				return;
@@ -33,14 +35,10 @@ public class PLEmployee extends AbstractEmployee {
 	}
 
 	private void handleCar() {
-		Car result = getQueue().poll();
-		if (result != null) {
-			carCounter++;
-			System.out
-					.println(String.format("%s забрал автомобиль из буффера. осталось:%s",
-							getEmployeeName(), getQueue().size()));
-		}
-
+		getQueue().add(new Car());
+		carCounter++;
+		System.out.println(String.format("%s добавил автомобиль в буффер. осталось:%s",
+				getEmployeeName(), getQueue().size()));
 	}
 
 	public int getCarCounter() {

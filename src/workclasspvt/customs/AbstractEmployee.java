@@ -1,4 +1,4 @@
-package workclasspvt.class12january.customs;
+package workclasspvt.customs;
 
 import java.util.Queue;
 import java.util.Random;

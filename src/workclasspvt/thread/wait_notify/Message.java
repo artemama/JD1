@@ -1,4 +1,4 @@
-package workclasspvt.class10january.wait_notify;
+package workclasspvt.thread.wait_notify;
 
 public class Message {
     private String msg;

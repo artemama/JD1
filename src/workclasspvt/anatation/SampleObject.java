@@ -1,4 +1,4 @@
-package workclasspvt.class13desemb.anatation;
+package workclasspvt.anatation;
 
 @Version(someAttribute = 121123, info = "1.0.0")
 public class SampleObject {
