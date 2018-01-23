@@ -22,13 +22,15 @@ public class Main {
 		TankGasStation tank95 = new TankGasStation(GasMark.gas95, 1000);
 		TankGasStation tank92 = new TankGasStation(GasMark.gas92, 1000);
 		TankGasStation tankDisel = new TankGasStation(GasMark.disel, 1000);
+		
+		for (int i = 0; i < 5; i++) {
+			Car car = new Car();
+			car.start(); // start thread //http://pro-java.ru/java-dlya-opytnyx/realizaciya-interfejsa-runnable-java/
 
 		while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
 			// create car // - params (fuel type, quantity) - in class
 			/* Car car = new Car(null); */
-			for (int i = 0; i < 5; i++) {
-				Car car = new Car();
-				car.start(); // start thread
+			
 
 				/*
 				 * Queue<GasStation> gasColumn; //= new ConcurrentLinkedQueue<GasStation>(); for
@@ -38,7 +40,7 @@ public class Main {
 
 				// getting fuel type of car
 				// searching if fuel is in tank
-
+				
 				if (car.getFuelType() == 0) {
 					if (car.quantity < tank95.getQantityTank() && tank95.getQantityTank() - car.quantity >= 0) {
 						tank95.setQantityTank(tank95.getQantityTank() - car.quantity);
@@ -93,7 +95,7 @@ public class Main {
 
 	}
 
-	private static void startWorkColumn() {
+	private void run() {
 
 	}
 

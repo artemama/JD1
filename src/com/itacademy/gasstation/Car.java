@@ -17,14 +17,15 @@ public class Car extends Thread{
 	int fuelType = (int) (Math.random() * 3);
 	int quantity = (int) (Math.random() * 20);
 
-	public Car(Queue<Car> queue) {
+	/*public Car(Queue<Car> queue) {
 		super();
 		this.numberCar = String.format("%s %s", getClass().getSimpleName(), getName());
 		System.out.println(String.format("Создан " + numberCar));
 
-	}
+	}*/
 		public Car() {
-		// TODO Auto-generated constructor stub
+			this.numberCar = String.format("%s %s", getClass().getSimpleName(), getName());
+			System.out.println(String.format("Создан " + numberCar));
 	}
 
 		public void run() {
