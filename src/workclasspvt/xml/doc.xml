@@ -1,11 +1,11 @@
 <?xml version = "1.0"?>
 <pointsList>
-	<point >
+	<point unit = "px">
 		<x>2</x>
 		<y>3</y>
-		<unit>px</unit>
+		
 	</point>
-	<point>
+	<point unit = "px">
 		<x>9</x>
 		<y>3</y>
 		<unit>px</unit>

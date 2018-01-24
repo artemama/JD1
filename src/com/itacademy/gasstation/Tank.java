@@ -10,6 +10,8 @@ public class Tank {
 	public void setQantityTank(int qantityTank) {
 		this.qantityTank = qantityTank;
 	}
+	
+	
 	/*public GasMark getFuelTupe() {
 		return fuelTupe;
 	}*/
