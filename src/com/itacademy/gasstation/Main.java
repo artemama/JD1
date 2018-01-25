@@ -1,7 +1,5 @@
 package com.itacademy.gasstation;
 
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /*есть 5 бензоколонок. на каждой 3 вида топлива: ДT, АИ-92, АИ-95 (использовать Enum)
 колонки питаются из соответствующих общих резервуаров 3х типов, в каждом по 1000 литров горючего на момент старта
@@ -20,20 +18,15 @@ public class Main {
 
 		// creating instances of tank's different types
 
-
+		
 		for (int i = 0; i < 5; i++) {
 			Car car = new Car();
-			// start thread
-			// //http://pro-java.ru/java-dlya-opytnyx/realizaciya-interfejsa-runnable-java/
 		}
+		
 
 	}
 
-	private void run() {
 
-	}
 
-	// TODO check all types of fuel
-	// TODO multiple threads
 
 }

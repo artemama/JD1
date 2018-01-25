@@ -2,9 +2,14 @@ package com.itacademy.gasstation;
 
 import java.util.Queue;
 
-public class Car extends Thread{
+public class Car extends Thread {
 	private String numberCar;
 	private Queue<Car> queue;
+	boolean tankIsEmpty;
+
+	public boolean isTankIsEmpty() {
+		return tankIsEmpty;
+	}
 
 	public int getFuelType() {
 		return fuelType;
@@ -17,42 +22,41 @@ public class Car extends Thread{
 	int fuelType;
 	int quantity;
 
-	/*public Car(Queue<Car> queue) {
-		super();
+	public Car() {
+
 		this.numberCar = String.format("%s %s", getClass().getSimpleName(), getName());
 		System.out.println(String.format("Создан " + numberCar));
 
-	}*/
-		public Car() {
 		
-			this.numberCar = String.format("%s %s", getClass().getSimpleName(), getName());
-			System.out.println(String.format("Создан " + numberCar));
-			
-			this.fuelType = (int) (Math.random() * 3);
-			this.quantity = (int) (Math.random() * 20);
-			this.start();
+		
+		this.fuelType = (int) (Math.random() * 3);
+		this.quantity = (int) (Math.random() * 20);
+		this.start();
 	}
-
-		public void run() {
+	public void run() {
 			
 			System.out.println(String.format(numberCar+ " заехал на колонку"));
 			
-		/*	while (tank92.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
-				// create car // - params (fuel type, quantity) - in class
-				 Car car = new Car(null); 
+			TankGasStation tank95 = new TankGasStation(GasMark.gas95, 1000);
+			TankGasStation tank92 = new TankGasStation(GasMark.gas92, 1000);
+			TankGasStation tankDisel = new TankGasStation(GasMark.disel, 1000);
+			
+			
 				
-
-					
-					 * Queue<GasStation> gasColumn; //= new ConcurrentLinkedQueue<GasStation>(); for
-					 * (int i = 0; i < 5; i++) { Queue<GasStation> gasColumn1 = new
-					 * ConcurrentLinkedQueue<GasStation>(); }
-					 
-
+			
+			while (true) {
+				// create car // - params (fuel type, quantity) - in class
+				 Car car = new Car(); 
+				
 					// getting fuel type of car
 					// searching if fuel is in tank
-					
+				 if (tank95.getQantityTank() > 0 && tank92.getQantityTank() > 0 && tankDisel.getQantityTank() > 0) {
+						tankIsEmpty = false;
+					} else {
+						tankIsEmpty = true;
+					}
 					if (this.getFuelType() == 0) {
-						if (this.quantity < tank95.getQantityTank() && tank95.getQantityTank() - this.quantity >= 0) {
+						if (this.quantity <  tank95.getQantityTank() && tank95.getQantityTank() - this.quantity >= 0) {
 							tank95.setQantityTank(tank95.getQantityTank() - this.quantity);
 							System.out.println("95 бензина в цистерне осталось - " + tank95.getQantityTank());
 						} else {
@@ -89,6 +93,9 @@ public class Car extends Thread{
 							System.out.println(String.format("Машина заправлятся %s л., сек.", this.quantity));
 
 						}
+						if (tankIsEmpty) {
+							break;
+						}
 
 					} catch (InterruptedException e1) {
 						// TODO Auto-generated catch block
@@ -99,10 +106,9 @@ public class Car extends Thread{
 
 					} catch (Exception e) {
 						// TODO: handle exception
-					}
-				}*/
-		}
-	
+					}}
+				}
+
 	public Queue<Car> getQueue() {
 		return queue;
 	}
