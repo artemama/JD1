@@ -6,7 +6,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		for (int i = 0; i < FuelType.values().length; i++) {
-			Tunks tank = new Tunks(1000, FuelType.values()[i]);
+			Tunks tank = new Tunks(100, FuelType.values()[i]);
 		}
 
 		for (int i = 0; i < 5; i++) {

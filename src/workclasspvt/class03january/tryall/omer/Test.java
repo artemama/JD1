@@ -13,7 +13,7 @@ public class Test {
 
 		List<FuelTank> fuelTanks = new ArrayList<FuelTank>();
 		for (int i = 0; i < FuelType.values().length; i++) {
-			FuelTank fuelTank = new FuelTank(i, 1000);
+			FuelTank fuelTank = new FuelTank(i, 100);
 			fuelTanks.add(fuelTank);
 		}
 

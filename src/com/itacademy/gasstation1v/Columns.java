@@ -1,4 +1,4 @@
-package com.itacademy.gasstation;
+package com.itacademy.gasstation1v;
 
 public class Columns extends GasStation{
 
