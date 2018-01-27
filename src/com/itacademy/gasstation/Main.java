@@ -1,5 +1,6 @@
 package com.itacademy.gasstation;
 
+import java.util.ArrayList;
 
 /*есть 5 бензоколонок. на каждой 3 вида топлива: ДT, АИ-92, АИ-95 (использовать Enum)
 колонки питаются из соответствующих общих резервуаров 3х типов, в каждом по 1000 литров горючего на момент старта
@@ -17,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		// creating instances of tank's different types
-
+		 ArrayList<Object> fTanksList = new ArrayList<>();
 		
 		for (int i = 0; i < 5; i++) {
 			Car car = new Car();
