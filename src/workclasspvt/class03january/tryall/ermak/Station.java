@@ -10,12 +10,7 @@ public class Station {
 		this.tanks = tanks;
 	}
 
-	/*public boolean isEmptyTank() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-*/
-	/*public boolean isEmptyTank() {
+	public boolean isEmptyTank() {
 		int vol = 0;
 		synchronized (tanks) {
 			for (Tank tank : tanks) {
@@ -28,6 +23,6 @@ public class Station {
 			}
 		}
 
-	}*/
+	}
 
 }

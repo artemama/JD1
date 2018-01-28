@@ -3,16 +3,13 @@ package com.itacademy.gasstation2v;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MainGasStation {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		/* Queue<Car> queue = new ConcurrentLinkedQueue<Car>(); */
-
 		List<AllTanks> fuelTanks = new ArrayList<AllTanks>();
-		List<GasStation> gasStationList = new ArrayList<GasStation>();		
-		
+		/*List<GasStation> gasStationList = new ArrayList<GasStation>();*/
+
 		for (int i = 0; i < GasMark.values().length; i++) {
 			AllTanks fTank = new Tank(GasMark.values()[i], 100);
 			fuelTanks.add(fTank);
@@ -26,10 +23,6 @@ public class MainGasStation {
 			gasStation.start();
 
 		}
-
-		/*while (!gasStationList.isEmptyTank()) {
-			System.out.println("END");
-		}*/
 
 	}
 

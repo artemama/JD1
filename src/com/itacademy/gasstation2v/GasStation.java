@@ -4,14 +4,11 @@ import java.util.List;
 
 public class GasStation extends Thread {
 	private List<AllTanks> fuelTanks;
-	private Car car;
 	private GasMark fuelGasMark;
 	private int tankValue;
-	static int counter = 0;
 
 	public GasStation(List<AllTanks> fuelTanks) {
 		this.fuelTanks = fuelTanks;
-		/* this.setDaemon(true); */
 
 	}
 
@@ -20,14 +17,11 @@ public class GasStation extends Thread {
 
 		while (true) {
 
-			counter++;
-			System.out.println(
-					String.format("Заехала машина № %s на заправку %s", counter, Thread.currentThread().getName()));
-
 			this.fuelGasMark = GasMark.values()[(int) (Math.random() * GasMark.values().length)];
 			this.tankValue = (int) (Math.random() * 20) + 1;
 
 			Car car = new Car(fuelGasMark, tankValue);
+			System.out.println(String.format("\n Машина заехала  на заправку %s \n", Thread.currentThread().getName()));
 
 			synchronized (fuelTanks) {
 				for (AllTanks tank : fuelTanks) {
@@ -47,33 +41,21 @@ public class GasStation extends Thread {
 
 					}
 					if ((tank.getFuelGasMark() == car.getFuelGasMark()) && (tank.getTankValue() < car.getTankValue())) {
-						System.out.println("-!-!-Извините, не хватает топлива " + car.getTankValue());
+						System.out.println(String.format(
+								"-!-!-Извините, в колонке %s не хватает топлива %s. \n --Остаток %s меньше чем Ваш запрос - %s",
+								Thread.currentThread().getName(), car.getFuelGasMark(), tank.getTankValue(),
+								car.getTankValue()));
+
+					} else {
+						System.out.println(String.format("Машина заправлена %s л. на заправке № %s", car.getTankValue(),
+								Thread.currentThread().getName()));
+
 					}
 
 				}
 			}
-			System.out.println(String.format("Машина № %s заправлена %s л.", counter, car.getTankValue()));
 
-			while (!isEmptyTank()) {
-				break;
-			}
 		}
-
-	}
-
-	public boolean isEmptyTank() {
-		int vol = 0;
-		synchronized (fuelTanks) {
-			for (AllTanks tank : fuelTanks) {
-				vol += tank.getTankValue();
-			}
-			if (vol == 0) {
-				System.out.println("Заправка закрыта - нет топлива");
-
-			}
-			return true;
-		}
-
 	}
 
 }
