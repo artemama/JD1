@@ -21,14 +21,13 @@ public class GasStation extends Thread {
 		while (true) {
 
 			counter++;
-			System.out.println("Заехала машина № " + counter);
+			System.out.println(
+					String.format("Заехала машина № %s на заправку %s", counter, Thread.currentThread().getName()));
 
 			this.fuelGasMark = GasMark.values()[(int) (Math.random() * GasMark.values().length)];
 			this.tankValue = (int) (Math.random() * 20) + 1;
 
 			Car car = new Car(fuelGasMark, tankValue);
-			
-			
 
 			synchronized (fuelTanks) {
 				for (AllTanks tank : fuelTanks) {
@@ -37,14 +36,20 @@ public class GasStation extends Thread {
 						tank.setTankValue(tank.getTankValue() - car.getTankValue());
 
 						System.out.println(String.format(
-								"Заправляем машину топливом: %s в количестве %s литров\n ---- В резервуаре осталось %s осталось  %s литров",
-								car.getFuelGasMark(), car.getTankValue(), tank.getFuelGasMark(), tank.getTankValue()));
-						try {
-							Thread.sleep(car.getTankValue() * 100);
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
+								"-Заправка № %s заправила машину %s в количестве %s литров\n ---- В резервуаре осталось %s -  %s л. \n ",
+								Thread.currentThread().getName(), car.getFuelGasMark(), car.getTankValue(),
+								tank.getFuelGasMark(), tank.getTankValue()));
 					}
+					try {
+						Thread.sleep(car.getTankValue() * 100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+
+					}
+					if ((tank.getFuelGasMark() == car.getFuelGasMark()) && (tank.getTankValue() < car.getTankValue())) {
+						System.out.println("-!-!-Извините, не хватает топлива " + car.getTankValue());
+					}
+
 				}
 			}
 			System.out.println(String.format("Машина № %s заправлена %s л.", counter, car.getTankValue()));
@@ -64,10 +69,11 @@ public class GasStation extends Thread {
 			}
 			if (vol == 0) {
 				System.out.println("Заправка закрыта - нет топлива");
-				
+
 			}
 			return true;
 		}
+
 	}
 
 }

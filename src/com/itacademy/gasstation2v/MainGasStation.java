@@ -22,14 +22,14 @@ public class MainGasStation {
 
 		for (int i = 0; i < 5; i++) {
 			GasStation gasStation = new GasStation(fuelTanks);
-			System.out.println("Начала работать заправка №" + i+1);
+			System.out.println("Начала работать заправка №" + Thread.currentThread().getName());
 			gasStation.start();
 
 		}
 
-		while (!gasStationList.isEmpty()) {
+		/*while (!gasStationList.isEmptyTank()) {
 			System.out.println("END");
-		}
+		}*/
 
 	}
 

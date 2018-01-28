@@ -22,7 +22,7 @@ public class Test {
 			column.start();
 		}
 		
-		while (!station.isEmptyTank()) {
+		/*while (!station.isEmptyTank()) {
 			synchronized (cars) {
 				if (cars.isEmpty()) {
 					cars.add(new Car());
@@ -30,7 +30,7 @@ public class Test {
 				}
 			}
 			
-		}
+		}*/
 		
 
 

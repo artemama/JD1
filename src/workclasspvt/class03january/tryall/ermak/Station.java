@@ -10,20 +10,24 @@ public class Station {
 		this.tanks = tanks;
 	}
 
-	public boolean isEmptyTank() {
+	/*public boolean isEmptyTank() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+*/
+	/*public boolean isEmptyTank() {
 		int vol = 0;
 		synchronized (tanks) {
 			for (Tank tank : tanks) {
 				vol += tank.getQuantityFuel();
 			}
 			if (vol == 0) {
-				System.out.println("END");
 				return true;
 			} else {
 				return false;
 			}
 		}
 
-	}
+	}*/
 
 }
