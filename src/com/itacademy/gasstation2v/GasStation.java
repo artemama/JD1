@@ -2,14 +2,16 @@ package com.itacademy.gasstation2v;
 
 import java.util.List;
 
-
 public class GasStation extends Thread {
 	private List<AllTanks> fuelTanks;
 	private Car car;
+	private GasMark fuelGasMark;
+	private int tankValue;
+	static int counter = 0;
 
 	public GasStation(List<AllTanks> fuelTanks) {
 		this.fuelTanks = fuelTanks;
-		this.setDaemon(true);
+		/* this.setDaemon(true); */
 
 	}
 
@@ -18,30 +20,42 @@ public class GasStation extends Thread {
 
 		while (true) {
 
-			fillingCar();
+			counter++;
+			System.out.println("Заехала машина № " + counter);
 
-		}
-	}
-	private void fillingCar() {
-		CarCreator carCreator = new CarCreator();
-		
-	}
+			this.fuelGasMark = GasMark.values()[(int) (Math.random() * GasMark.values().length)];
+			this.tankValue = (int) (Math.random() * 20) + 1;
 
-	public boolean fillingCar1() {
-		CarCreator carCreator = new CarCreator();
-		synchronized (fuelTanks) {
-			for (AllTanks tank : fuelTanks) {
-				if ((tank.getFuelGasMark() == car.getFuelGasMark()) && (tank.getTankValue() >= car.getTankValue())) {
-					tank.setTankValue(tank.getTankValue() - car.getTankValue());
-					System.out.println(String.format("Fill car (%s -- %s)---- Tank (%s -- %s)", car.getFuelGasMark(),
-							car.getTankValue(), tank.getFuelGasMark(), tank.getTankValue()));
-					return true;
+			Car car = new Car(fuelGasMark, tankValue);
+			
+			
+
+			synchronized (fuelTanks) {
+				for (AllTanks tank : fuelTanks) {
+					if ((tank.getFuelGasMark() == car.getFuelGasMark())
+							&& (tank.getTankValue() >= car.getTankValue())) {
+						tank.setTankValue(tank.getTankValue() - car.getTankValue());
+
+						System.out.println(String.format(
+								"Заправляем машину топливом: %s в количестве %s литров\n ---- В резервуаре осталось %s осталось  %s литров",
+								car.getFuelGasMark(), car.getTankValue(), tank.getFuelGasMark(), tank.getTankValue()));
+						try {
+							Thread.sleep(car.getTankValue() * 100);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
 				}
 			}
-			System.out.println("Not enough fuel. Try next car");
-			return false;
+			System.out.println(String.format("Машина № %s заправлена %s л.", counter, car.getTankValue()));
+
+			while (!isEmptyTank()) {
+				break;
+			}
 		}
+
 	}
+
 	public boolean isEmptyTank() {
 		int vol = 0;
 		synchronized (fuelTanks) {
@@ -49,11 +63,10 @@ public class GasStation extends Thread {
 				vol += tank.getTankValue();
 			}
 			if (vol == 0) {
-				System.out.println("Заправка закрыта, нет топлива");
-				return true;
-			} else {
-				return false;
+				System.out.println("Заправка закрыта - нет топлива");
+				
 			}
+			return true;
 		}
 	}
 

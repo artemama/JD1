@@ -11,6 +11,8 @@ public class MainGasStation {
 		/* Queue<Car> queue = new ConcurrentLinkedQueue<Car>(); */
 
 		List<AllTanks> fuelTanks = new ArrayList<AllTanks>();
+		List<GasStation> gasStationList = new ArrayList<GasStation>();		
+		
 		for (int i = 0; i < GasMark.values().length; i++) {
 			AllTanks fTank = new Tank(GasMark.values()[i], 100);
 			fuelTanks.add(fTank);
@@ -18,16 +20,15 @@ public class MainGasStation {
 					fuelTanks.get(i).getTankValue()));
 		}
 
-		List<GasStation> gasStation = new ArrayList<GasStation>();
 		for (int i = 0; i < 5; i++) {
-			GasStation gasStation1 = new GasStation(fuelTanks);
-			gasStation1.start();
+			GasStation gasStation = new GasStation(fuelTanks);
+			System.out.println("Начала работать заправка №" + i+1);
+			gasStation.start();
 
 		}
 
-		while (!gasStation.isEmpty()) {
-			
-			CarCreator CarCreator = new CarCreator();
+		while (!gasStationList.isEmpty()) {
+			System.out.println("END");
 		}
 
 	}
