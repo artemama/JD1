@@ -3,9 +3,6 @@ package com.itacademy.gasstation1v;
 import java.util.ArrayList;
 import java.util.List;
 
-import workclasspvt.class03january.tryall.ermak.Car;
-import workclasspvt.class03january.tryall.ermak.Column;
-
 
 public class Main {
 

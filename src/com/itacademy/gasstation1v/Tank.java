@@ -1,5 +1,7 @@
 package com.itacademy.gasstation1v;
 
+import com.itacademy.gasstation2v.AllTanks;
+
 import workclasspvt.class03january.tryall.shumaher.FuelType;
 
 abstract class Tank {
@@ -29,5 +31,6 @@ abstract class Tank {
 	public Tank(GasMark gasMark, int qantityTank) {
 		super();
 	}
+	
 
 }
