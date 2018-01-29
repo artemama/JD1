@@ -7,18 +7,18 @@ public class MainGasStation {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		List<AllTanks> fuelTanks = new ArrayList<AllTanks>();
+		List<FuelHolder> fuelTanks = new ArrayList<FuelHolder>();
 		/*List<GasStation> gasStationList = new ArrayList<GasStation>();*/
 
 		for (int i = 0; i < GasMark.values().length; i++) {
-			AllTanks fTank = new Tank(GasMark.values()[i], 100);
+			FuelHolder fTank = new Tank(GasMark.values()[i], 100);
 			fuelTanks.add(fTank);
 			System.out.println(String.format("Имеется Резервуар %s , объемом %s ", GasMark.values()[i],
 					fuelTanks.get(i).getTankValue()));
 		}
 
 		for (int i = 0; i < 5; i++) {
-			GasStation gasStation = new GasStation(fuelTanks);
+			Column gasStation = new Column(fuelTanks);
 			System.out.println("Начала работать заправка №" + Thread.currentThread().getName());
 			gasStation.start();
 

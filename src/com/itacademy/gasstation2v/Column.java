@@ -2,12 +2,12 @@ package com.itacademy.gasstation2v;
 
 import java.util.List;
 
-public class GasStation extends Thread {
-	private List<AllTanks> fuelTanks;
-	private GasMark fuelGasMark;
-	private int tankValue;
+public class Column extends Thread {
+	private List<FuelHolder> fuelTanks;
+	/*private GasMark fuelGasMark;
+	private int tankValue;*/
 
-	public GasStation(List<AllTanks> fuelTanks) {
+	public Column(List<FuelHolder> fuelTanks) {
 		this.fuelTanks = fuelTanks;
 
 	}
@@ -17,14 +17,16 @@ public class GasStation extends Thread {
 
 		while (true) {
 
-			this.fuelGasMark = GasMark.values()[(int) (Math.random() * GasMark.values().length)];
-			this.tankValue = (int) (Math.random() * 20) + 1;
+			GasMark fuelGasMark = GasMark.values()[(int) (Math.random() * GasMark.values().length)];
+			int tankValue = (int) (Math.random() * 20) + 1;
 
 			Car car = new Car(fuelGasMark, tankValue);
 			System.out.println(String.format("\n Машина заехала  на заправку %s \n", Thread.currentThread().getName()));
+			
+			
 
 			synchronized (fuelTanks) {
-				for (AllTanks tank : fuelTanks) {
+				for (FuelHolder tank : fuelTanks) {
 					if ((tank.getFuelGasMark() == car.getFuelGasMark())
 							&& (tank.getTankValue() >= car.getTankValue())) {
 						tank.setTankValue(tank.getTankValue() - car.getTankValue());

@@ -1,10 +1,10 @@
 package com.itacademy.gasstation2v;
 
-public abstract class AllTanks {
+public abstract class FuelHolder {
 	private GasMark fuelGasMark;
 	private int tankValue;
 
-	public AllTanks(GasMark fuelGasMark, int tankValue) {
+	public FuelHolder(GasMark fuelGasMark, int tankValue) {
 		this.fuelGasMark = fuelGasMark;
 		this.tankValue = tankValue;
 	}
