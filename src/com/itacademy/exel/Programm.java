@@ -9,6 +9,7 @@ import java.util.List;
 import com.itacademy.exel.command.CExitProgramm;
 import com.itacademy.exel.command.CNewFile;
 import com.itacademy.exel.command.COpenFile;
+import com.itacademy.exel.command.CSaveProgramm;
 import com.itacademy.exel.command.Command;
 
 public class Programm {
@@ -20,11 +21,12 @@ public class Programm {
 		topLevelCommands.add(new CNewFile("0"));
 		topLevelCommands.add(new COpenFile("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
+		topLevelCommands.add(new CSaveProgramm("3"));
 	}
 
 	public void start() throws IOException {
 		while (true) {
-			System.out.println("Choose the required command...");
+			System.out.println("Выберите необходимую комманду...");
 			for (Command command : topLevelCommands) {
 				command.printMenuItem();
 			}

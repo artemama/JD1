@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class CNewFile extends Command{
 
 	public CNewFile(String key) {
-		super("Открыть  документ");
+		super("Создать  документ");
 		setKey(key);
 	}
 
@@ -18,6 +18,7 @@ public class CNewFile extends Command{
 
 		String fileName = reader.readLine();
 		// create a new file
+		
 		// print list of actions (commands) for a new file
 		
 	}

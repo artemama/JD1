@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class COpenFile extends Command {
 	public COpenFile(String key) {
-		super("Cоздать  документ");
+		super("Открыть  документ");
 		setKey(key);
 	}
 
@@ -17,6 +17,7 @@ public class COpenFile extends Command {
 
 		String fileName = reader.readLine();
 		// open file from file system, deserialize and propose action items
+		
 		// print list of actions (commands) for a current opened file file
 	}
 }

@@ -1,4 +1,4 @@
-package workclasspvt.class03january.tryall.shumaher;
+package workclasspvt.class03january.tryall.shumaher.gs;
 
 public abstract class FuelHolder {
 	private FuelType fuelType;
