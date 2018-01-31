@@ -10,27 +10,24 @@ import com.itacademy.exel.dock.Document;
 public class CSaveProgramm extends Command {
 	private Document document;
 
-	public CSaveProgramm(/*String key,*/ String string) {
+	public CSaveProgramm( String key) {
 		super("Сохранить файл");
-		/*setKey(key);*/
-	
+		 setKey(key); 
 
 	}
 
-
-	/*public CSaveProgramm(Document document) {
-		super("Сохранить файл");
-		this.document = document;
-		// TODO Auto-generated constructor stub
-	}
-*/
+	/*
+	 * public CSaveProgramm(Document document) { super("Сохранить файл");
+	 * this.document = document; // TODO Auto-generated constructor stub }
+	 */
 
 	@Override
 	public void execute() throws IOException {
 		System.out.println("Введите имя файла для сохранения");
 		Scanner scaner = new Scanner(System.in);
 		String fileName = "";
-		
+		fileName = scaner.next();
+
 		FileOutputStream fos = new FileOutputStream(fileName);
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(this.document);

@@ -21,7 +21,7 @@ public class Programm {
 		topLevelCommands.add(new CNewFile("0"));
 		topLevelCommands.add(new COpenFile("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
-		topLevelCommands.add(new CSaveProgramm("Для сохранения введите имя файла"));
+		topLevelCommands.add(new CSaveProgramm("3"));
 	}
 
 	public void start() throws IOException {
