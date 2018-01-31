@@ -13,9 +13,8 @@ public class CSaveProgramm extends Command {
 	public CSaveProgramm( String key) {
 		super("Сохранить файл");
 		 setKey(key); 
-
 	}
-
+		
 	/*
 	 * public CSaveProgramm(Document document) { super("Сохранить файл");
 	 * this.document = document; // TODO Auto-generated constructor stub }
