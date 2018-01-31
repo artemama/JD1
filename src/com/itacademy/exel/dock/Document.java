@@ -7,4 +7,12 @@ import java.util.TreeMap;
 public class Document implements Serializable {
 	private Map<Integer, Line> document = new TreeMap<Integer, Line>();
 
+	public Map<Integer, Line> getDocument() {
+		return document;
+	}
+
+	public void setDocument(Map<Integer, Line> document) {
+		this.document = document;
+	}
+
 }

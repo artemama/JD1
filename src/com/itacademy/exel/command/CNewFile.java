@@ -20,6 +20,8 @@ public class CNewFile extends Command implements Serializable{
 		String fileName = reader.readLine();
 		// create a new file
 		
+		
+		
 		// print list of actions (commands) for a new file
 		
 	}
