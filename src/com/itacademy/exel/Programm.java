@@ -30,9 +30,8 @@ public class Programm {
 			for (Command command : topLevelCommands) {
 				command.printMenuItem();
 			}
-			
-
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //читает введенное значение
 
 			// Reading data using readLine
 			String input = reader.readLine();
