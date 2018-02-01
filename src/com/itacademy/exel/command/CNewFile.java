@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 
+import com.itacademy.exel.dock.Document;
+
 public class CNewFile extends Command implements Serializable{
 
 	public CNewFile(String key) {
@@ -19,7 +21,7 @@ public class CNewFile extends Command implements Serializable{
 
 		String fileName = reader.readLine();
 		// create a new file
-		
+		Document document = new Document();
 		
 		
 		// print list of actions (commands) for a new file
