@@ -6,7 +6,11 @@ import java.util.TreeMap;
 
 public class Document implements Serializable {
 	private Map<Integer, Line> document = new TreeMap<Integer, Line>();
-	
+
+	public Document() {
+		super();
+	}
+
 	public Map<Integer, Line> getDocument() {
 		return document;
 	}
@@ -14,22 +18,5 @@ public class Document implements Serializable {
 	public void setDocument(Map<Integer, Line> document) {
 		this.document = document;
 	}
-
-	public String getDocName() {
-		return docName;
-	}
-
-	public void setDocName(String docName) {
-		this.docName = docName;
-	}
-
-	private String docName;
-	
-	public Document(Map<Integer, Line> document, String docName) {
-		super();
-		this.document = document;
-		this.docName = docName;
-	}
-
 
 }
