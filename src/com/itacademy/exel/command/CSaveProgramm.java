@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
+import com.itacademy.exel.dock.Cell;
 import com.itacademy.exel.dock.Document;
 
 public class CSaveProgramm extends Command {
@@ -28,9 +29,14 @@ public class CSaveProgramm extends Command {
 		String fileName = "";
 		fileName = scaner.next();
 
+		
 		FileOutputStream fos = new FileOutputStream(fileName);
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+		Cell cell = new Cell("fkjhasjk");
+
 		oos.writeObject(this.document);
+		oos.writeObject(cell);
 		oos.flush();
 		oos.close();
 		System.out.println(String.format("Файл с именем %s создан", fileName));

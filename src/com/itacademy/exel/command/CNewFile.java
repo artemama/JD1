@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 
+import com.itacademy.exel.dock.Cell;
 import com.itacademy.exel.dock.Document;
 
 public class CNewFile extends Command implements Serializable{
@@ -23,6 +24,8 @@ public class CNewFile extends Command implements Serializable{
 		// create a new file
 		
 		Document document = new Document();
+		
+		
 /*		System.out.println(document);*/
 		System.out.println("Файл создан с именем "+ fileName);
 		

@@ -18,5 +18,5 @@ public class Document implements Serializable {
 	public void setDocument(Map<Integer, Line> document) {
 		this.document = document;
 	}
-
+	
 }
