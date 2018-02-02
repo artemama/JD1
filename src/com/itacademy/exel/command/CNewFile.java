@@ -21,7 +21,9 @@ public class CNewFile extends Command implements Serializable{
 
 		String fileName = reader.readLine();
 		// create a new file
-		Document document = new Document();
+		
+		
+	/*  !!	Document document = new Document(document, docName);*/
 		
 		
 		// print list of actions (commands) for a new file
