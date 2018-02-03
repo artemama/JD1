@@ -5,7 +5,7 @@ import workclasspvt.class03january.tryall.zen.excel.panel.startPanel.StartPanel;
 
 public class Excel {
 	public static void main(String[] args) {
-		Language.setLocale();
+		/*Language.setLocale();*/
 		StartPanel.start();
 	}
 }

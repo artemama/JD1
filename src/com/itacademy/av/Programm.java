@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.itacademy.exel.command.CExitProgramm;
+import com.itacademy.av.command.CExitProgramm;
+import com.itacademy.av.command.FindCar;
 import com.itacademy.exel.command.CNewFile;
 import com.itacademy.exel.command.COpenFile;
 import com.itacademy.exel.command.CSaveProgramm;
@@ -21,7 +22,7 @@ public class Programm {
 	
 	public Programm() {
 		super();
-		topLevelCommands.add(new CNewFile("0"));
+		topLevelCommands.add(new FindCar("0"));
 		topLevelCommands.add(new COpenFile("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
 		topLevelCommands.add(new CSaveProgramm("3"));
