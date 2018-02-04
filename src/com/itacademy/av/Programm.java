@@ -1,4 +1,4 @@
-package com.itacademy.exel;
+package com.itacademy.av;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,24 +6,27 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.itacademy.av.command.CExitProgramm;
+import com.itacademy.av.command.AddCar;
+import com.itacademy.av.command.Command;
 import com.itacademy.av.command.FindCar;
-import com.itacademy.exel.command.CNewFile;
+/*import com.itacademy.exel.command.CNewFile;
 import com.itacademy.exel.command.COpenFile;
 import com.itacademy.exel.command.CSaveProgramm;
 import com.itacademy.exel.command.Command;
-import com.itacademy.exel.dock.Document;
+import com.itacademy.exel.dock.Document;*/
 
 
 public class Programm {
-
+	
+	
+	
 	private List<Command> topLevelCommands = new ArrayList<>();
 	private List<Command> secondLevelCommands = new ArrayList<>();
 	
 	public Programm() {
 		super();
 		topLevelCommands.add(new FindCar("0"));
-		topLevelCommands.add(new COpenFile("1"));
+		topLevelCommands.add(new AddCar("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
 		topLevelCommands.add(new CSaveProgramm("3"));
 		
@@ -49,14 +52,14 @@ public class Programm {
 			}
 		}
 	}
-	protected void enterToSecondMenu(Document document) {
+	/*protected void enterToSecondMenu(Document document) {
 		System.out.println("You are in file menu.");
 		List<Command> secondLevelCommands = new ArrayList<Command>();
-	/*	secondLevelCommands.add(new CommandRead("read", "For read cell print", sheet));
+		secondLevelCommands.add(new CommandRead("read", "For read cell print", sheet));
 		secondLevelCommands.add(new CommandEdit("edit", "For edit cell print", sheet));
 		secondLevelCommands.add(new CommandSave("save", "For save file print", sheet));
 		secondLevelCommands.add(new CommandExit("exit", "For close file and exit to previous menu print"));
 		Menu menu = new Menu(secondLevelCommands);
-		menu.execute();*/
-	}
+		menu.execute();
+	}*/
 }

@@ -13,6 +13,10 @@ public abstract class Command {
 		this.key = key;
 	}
 
+	public Command() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public boolean isSelected(String userInput) {
 		return key.equals(userInput);
 	}

@@ -16,11 +16,6 @@ public class CSaveProgramm extends Command {
 		 setKey(key); 
 	}
 		
-	/*
-	 * public CSaveProgramm(Document document) { super("Сохранить файл");
-	 * this.document = document; // TODO Auto-generated constructor stub }
-	 */
-
 	@Override
 	public void execute() throws IOException {
 		
