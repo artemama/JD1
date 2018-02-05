@@ -1,0 +1,107 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 10.1
+-- Dumped by pg_dump version 10.1
+
+-- Started on 2018-02-05 22:04:25
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET search_path = public, pg_catalog;
+
+--
+-- TOC entry 2823 (class 0 OID 24585)
+-- Dependencies: 197
+-- Data for Name: brand; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY brand (name, id, car_id) FROM stdin;
+VW	1	\N
+AUDI	2	\N
+PEUGEOT	3	\N
+KIA	4	\N
+OPEL	5	\N
+\.
+
+
+--
+-- TOC entry 2822 (class 0 OID 24577)
+-- Dependencies: 196
+-- Data for Name: car; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY car (engyne_type, year, model_id, id) FROM stdin;
+gas	2017	1	2
+gas	2017	1	3
+DT	2017	2	4
+gas	2017	3	6
+DT	2016	1	5
+gas	2014	8	7
+\.
+
+
+--
+-- TOC entry 2824 (class 0 OID 24591)
+-- Dependencies: 198
+-- Data for Name: model; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY model (name, brand_id, id) FROM stdin;
+POLO	1	1
+touran	1	2
+TOUREG	1	3
+GOLF	1	4
+Q5	2	5
+Q3	2	6
+100	2	7
+80	2	8
+406	3	9
+606	3	10
+206	3	11
+207	3	12
+SPORTAGE	4	13
+\.
+
+
+--
+-- TOC entry 2838 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: brand_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('brand_id_seq', 6, true);
+
+
+--
+-- TOC entry 2839 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: car_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('car_id_seq', 7, true);
+
+
+--
+-- TOC entry 2840 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: model_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('model_id_seq', 13, true);
+
+
+-- Completed on 2018-02-05 22:04:26
+
+--
+-- PostgreSQL database dump complete
+--
+
