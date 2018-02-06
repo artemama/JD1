@@ -25,6 +25,7 @@ public class Programm {
 		topLevelCommands.add(new COpenFile("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
 		topLevelCommands.add(new CSaveProgramm("3"));
+
 		
 		secondLevelCommands.add((0), null);
 	}
@@ -38,7 +39,6 @@ public class Programm {
 		
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //читает введенное значение
 
-			// Reading data using readLine
 			String input = reader.readLine();
 
 			for (Command command : topLevelCommands) {
@@ -48,13 +48,13 @@ public class Programm {
 			}
 		}
 	}
-	protected void enterToSecondMenu(Document document) {
+	protected void enterSecondMenu(Document document) {
 		System.out.println("You are in file menu.");
 		List<Command> secondLevelCommands = new ArrayList<Command>();
-	/*	secondLevelCommands.add(new CommandRead("read", "For read cell print", sheet));
-		secondLevelCommands.add(new CommandEdit("edit", "For edit cell print", sheet));
-		secondLevelCommands.add(new CommandSave("save", "For save file print", sheet));
-		secondLevelCommands.add(new CommandExit("exit", "For close file and exit to previous menu print"));
+	/*	secondLevelCommands.add(new CRead("1", "Read cell", table));
+		secondLevelCommands.add(new CEdit("2", "Edit cell", table));
+		secondLevelCommands.add(new CSave("3", "Save file", table));
+		secondLevelCommands.add(new CommandExit("4", "For close file and exit"));
 		Menu menu = new Menu(secondLevelCommands);
 		menu.execute();*/
 	}

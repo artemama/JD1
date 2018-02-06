@@ -2,7 +2,6 @@ package com.itacademy.exel.command;
 
 import java.io.IOException;
 
-
 public abstract class Command {
 
 	private String title;
@@ -14,22 +13,24 @@ public abstract class Command {
 		this.title = title;
 		this.key = key;
 	}
-	
+
+	public Command(String key) {
+		super();
+		this.key = key;
+
+	}
 
 	public String getTitle() {
 		return title;
 	}
 
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-
 	public boolean isSelected(String userInput) {
 		return key.equals(userInput);
 	}
-
 
 	public String getKey() {
 		return key;
@@ -44,8 +45,5 @@ public abstract class Command {
 	}
 
 	public abstract void execute() throws IOException;
-
-
-
 
 }
