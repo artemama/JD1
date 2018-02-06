@@ -18,5 +18,23 @@ public class Document implements Serializable {
 	public void setDocument(Map<Integer, Line> document) {
 		this.document = document;
 	}
+
+	public boolean lineExist(Integer i) {
+		if (getLine(i) == null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	private Object getLine(Integer i) {
+		// TODO Auto-generated method stub
+		return document.get(i);
+	}
+
+	public Line getline(Integer i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

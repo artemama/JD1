@@ -2,6 +2,8 @@ package com.itacademy.exel.command;
 
 import java.io.IOException;
 
+import com.itacademy.exel.dock.Document;
+
 public abstract class Command {
 
 	private String title;
@@ -18,6 +20,10 @@ public abstract class Command {
 		super();
 		this.key = key;
 
+	}
+
+	public Command(String title, String key, Document document) {
+		
 	}
 
 	public String getTitle() {
