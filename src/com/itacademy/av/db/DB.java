@@ -1,17 +1,20 @@
-package com.itacademy.av.bd;
+package com.itacademy.av.db;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
-public class bd {
-	private HashSet<String> brand = new HashSet<String>();
+public class DB {
+	private List<String> brand = new ArrayList<String>();
 	private HashMap<String, String> model = new HashMap<String, String>();
 
-	public HashSet<String> getBrand() {
+
+	public List<String> getBrand() {
 		return brand;
 	}
 
-	public void setBrand(HashSet<String> brand) {
+	public void setBrand(List<String> brand) {
 		this.brand = brand;
 	}
 

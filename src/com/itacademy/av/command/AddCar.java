@@ -1,12 +1,13 @@
 package com.itacademy.av.command;
 
+import com.itacademy.av.db.DB;
 
-public class AddCar {
+public class AddCar extends DB{
+	private String brand;
+	private String model;
+	
 	
 
-	public AddCar(String string) {
-		// TODO Auto-generated constructor stub
-	}
 
 
 }
