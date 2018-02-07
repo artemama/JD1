@@ -10,6 +10,9 @@ public class Cell implements Serializable{
 		this.value = value;
 	}
 
+	public Cell(Document document) {
+	}
+
 	public String getValue() {
 		return value;
 	}

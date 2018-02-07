@@ -18,7 +18,7 @@ public class CellReader extends Command{
 		String s;
 		Scanner scan = new Scanner(System.in);
 		do {
-			System.out.println("Please, enter cell address. For example [23,D]. (Remember [1..1000,A-Z]).");
+			System.out.println("Введите номер ячейки [23,D]. (Remember [1..1000,A-Z]).");
 			s = scan.next();
 		} while (s.matches("\\[([1-9][0-9]{0,2}|1000),[A-Z]\\]")); {
 			System.out.println("Incorrect cell address.");
