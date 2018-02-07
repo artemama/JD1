@@ -25,11 +25,11 @@ public class Programm {
 	
 	public Programm() {
 		super();
-	/*	topLevelCommands.add(new FindCar("0"));
+		topLevelCommands.add(new FindCar("0"));
 		topLevelCommands.add(new AddCar("1"));
 		topLevelCommands.add(new CExitProgramm("2"));
 		topLevelCommands.add(new CSaveProgramm("3"));
-		*/
+		
 		secondLevelCommands.add((0), null);
 	}
 
