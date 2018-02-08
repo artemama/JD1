@@ -7,11 +7,11 @@ import java.util.Scanner;
 import com.itacademy.av.command.Command;
 
 
-public class Menu {
+public class Menu1{
 
 		List<Command> LevelCommands;
 
-		public Menu(List<Command> LevelCommands) {
+		public Menu1(List<Command> LevelCommands) {
 			this.LevelCommands = LevelCommands;
 		}
 

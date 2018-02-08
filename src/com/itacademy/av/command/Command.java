@@ -13,6 +13,10 @@ public abstract class Command {
 		this.key = key;
 	}
 
+	public Command(String key) {
+		this.key = key;
+	}
+
 	public Command() {
 		// TODO Auto-generated constructor stub
 	}
@@ -34,5 +38,6 @@ public abstract class Command {
 	}
 
 	public abstract void execute() throws IOException;
+
 
 }

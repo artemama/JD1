@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DB {
 	private List<String> brand = new ArrayList<String>();
-	private HashMap<String, String> model = new HashMap<String, String>();
+	private HashSet<String> model = new HashSet<String>();
 
 
 	public List<String> getBrand() {
@@ -18,11 +18,11 @@ public class DB {
 		this.brand = brand;
 	}
 
-	public HashMap<String, String> getModel() {
+	public HashSet<String> getModel() {
 		return model;
 	}
 
-	public void setModel(HashMap<String, String> model) {
+	public void setModel(HashSet<String> model) {
 		this.model = model;
 	}
 

@@ -1,37 +1,19 @@
 package com.itacademy.av;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
-public class Car implements Serializable {
+import com.itacademy.av.db.DB;
+
+public class Car extends DB implements Serializable {
 	
-	public Car(String brand, String model) {
+	public Car(List<String> list, HashSet<String> hashSet) {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
-		this.model = model;
-	}
-
-	private String brand;
-	private String model;
-
-	@Override
-	public String toString() {
-		return "Car [brand=" + brand + ", model=" + model + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
-	}
+	
+	Car car = new Car(getBrand(), getModel());
+	
 
 }
