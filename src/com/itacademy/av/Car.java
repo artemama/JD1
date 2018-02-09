@@ -13,7 +13,15 @@ public class Car extends DB implements Serializable {
 		super();
 	}
 	
-	Car car = new Car(getBrand(), getModel());
-	
+	/*Car car = new Car(getBrand(), getModel());
+
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+	*/
 
 }
