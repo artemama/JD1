@@ -8,12 +8,14 @@ import java.util.List;
 import com.itacademy.av.db.DB;
 
 public class Car extends DB implements Serializable {
-	
-	public Car(List<String> list, HashSet<String> hashSet) {
-		super();
+
+	public Car(HashSet<String> brand, HashMap<String, String> model) {
+		super(brand, model);
+		// TODO Auto-generated constructor stub
 	}
 	
-	/*Car car = new Car(getBrand(), getModel());
+	/*
+	Car car = new Car(getBrand(), getModel());
 
 	public Car getCar() {
 		return car;

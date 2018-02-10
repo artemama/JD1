@@ -2,29 +2,35 @@ package com.itacademy.av.db;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class DB implements Serializable {
-	private List<String> brand = new ArrayList<String>();
-	private HashSet<String> model = new HashSet<String>();
+	private HashSet<String> brand = new HashSet<>();
+	private HashMap<String, String> model = new HashMap<>();
 
-
-	public List<String> getBrand() {
+	public HashSet<String> getBrand() {
 		return brand;
 	}
 
-	public void setBrand(List<String> brand) {
+	public void setBrand(HashSet<String> brand) {	
 		this.brand = brand;
 	}
 
-	public HashSet<String> getModel() {
+	public HashMap<String, String> getModel() {
 		return model;
 	}
 
-	public void setModel(HashSet<String> model) {
+	public void setModel(HashMap<String, String> model) {
 		this.model = model;
 	}
 
-	
+	public DB(HashSet<String> brand, HashMap<String, String> model) {
+		super();
+		this.brand = brand;
+		this.model = model;
+	}
+
 }
