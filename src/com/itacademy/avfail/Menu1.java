@@ -1,12 +1,11 @@
-package com.itacademy.av;
+package com.itacademy.avfail;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.itacademy.av.command.Command;
 
-
+/*
 public class Menu1{
 
 		List<Command> LevelCommands;
@@ -31,4 +30,4 @@ public class Menu1{
 			} while (!s.equals(0)); //0 - command to exit
 
 		}
-	}
+	}*/

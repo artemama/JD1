@@ -1,4 +1,4 @@
-package com.itacademy.av.db;
+package com.itacademy.avfail.db;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -21,38 +21,45 @@ public class DB implements Serializable {
 	private HashSet<String> audis = new HashSet<String>(Arrays.asList(audi));
 	private HashSet<String> vws = new HashSet<String>(Arrays.asList(vw));
 	private HashSet<String> bmws = new HashSet<String>(Arrays.asList(bmw));
-	private HashMap<String, Object> models = new HashMap<>(); // мапа бренд-модель
+	private HashMap<String, Object> models = new HashMap<>(); 					// мапа бренд-модель
 	private List<Car> cars = new ArrayList<>();
-
+	
 	public void fillDB() {
 		models.put("Audi", getAudis());
 		models.put("VW", getVws());
 		models.put("BMW", getBmws());
 	}
-
+	
+	
 	public HashSet<String> getAudis() {
 		return audis;
 	}
+
 
 	public void setAudis(HashSet<String> audis) {
 		this.audis = audis;
 	}
 
+
 	public HashSet<String> getVws() {
 		return vws;
 	}
+
 
 	public void setVws(HashSet<String> vws) {
 		this.vws = vws;
 	}
 
+
 	public HashSet<String> getBmws() {
 		return bmws;
 	}
 
+
 	public void setBmws(HashSet<String> bmws) {
 		this.bmws = bmws;
 	}
+
 
 	public HashSet<String> getBrands() {
 		return brands;
@@ -61,6 +68,7 @@ public class DB implements Serializable {
 	public void setBrands(HashSet<String> brands) {
 		this.brands = brands;
 	}
+
 
 	public List<Car> getCars() {
 		return cars;
@@ -81,10 +89,5 @@ public class DB implements Serializable {
 			System.out.println(itr.next().toString());
 		}
 
-	}
-
-	public int size() {
-		int i = models.size();
-		return i;
 	}
 }

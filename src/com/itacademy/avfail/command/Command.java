@@ -1,4 +1,4 @@
-package com.itacademy.av.command;
+package com.itacademy.avfail.command;
 
 import java.io.IOException;
 
@@ -12,17 +12,23 @@ public abstract class Command {
 		this.title = title;
 		this.key = key;
 	}
-
+	
 	public Command(String key) {
 		this.key = key;
+	}
+	
+	public Command() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public boolean isSelected(String userInput) {
 		if (key.equals(userInput)) {
 			return true;
+			
 		} else {
 			return false;
 		}
+		
 	}
 
 	public String getKey() {
@@ -34,9 +40,10 @@ public abstract class Command {
 	}
 
 	public void printMenuItem() {
-		System.out.println(String.format("%s - %s", this.title, this.key));
+		System.out.println(String.format("%s - %s", this.key, this.title));
 	}
 
-	public abstract void execute() throws IOException;
+	/*public abstract void execute() throws IOException;*/
+
 
 }

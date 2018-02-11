@@ -1,4 +1,4 @@
-package com.itacademy.av;
+package com.itacademy.avfail;
 
 import java.io.Serializable;
 

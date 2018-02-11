@@ -1,4 +1,4 @@
-package com.itacademy.av.command;
+package com.itacademy.avfail.command;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,8 +10,8 @@ public class Save extends Command {
 	private HashSet brand;
 	private HashMap model;
 
-	public Save(String title, String key, HashSet brand, HashMap model) {
-		super(title, key);
+	public Save(HashSet brand, HashMap model) {
+		super();
 		this.brand = brand;
 		this.model = model;
 	}
@@ -29,6 +29,4 @@ public class Save extends Command {
 		}
 
 	}
-
-
 }

@@ -1,4 +1,4 @@
-package com.itacademy.av;
+package com.itacademy.avfail;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,17 +14,17 @@ import com.itacademy.av.db.DB;
 
 public class Programm {
 
-	/*private List<Command> topLevelCommands = new ArrayList<>();
+	private List<Command> topLevelCommands = new ArrayList<>();
 
 	public Programm() throws IOException {
-		super();
+		/*super();*/
 		// создатьь экземпляр класса ДБ
-		DB db = new DB();
-		topLevelCommands.add(new FindCar("1"));
+		/*DB db = new DB();*/
+		/*topLevelCommands.add(new FindCar("1"));
 		topLevelCommands.add(new AddCar("2", db));
 		topLevelCommands.add(new ExitProgram("0"));
 	}*/
-
+	}
 	public void start() throws IOException {
 		while (true) {
 			System.out.println("Выберите необходимую комманду...");
