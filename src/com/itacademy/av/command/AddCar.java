@@ -18,10 +18,11 @@ public class AddCar extends Command implements Serializable{
 	}
 
 	public void execute(DB db) throws IOException {
+		System.out.println("ВВедите бренд");
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // читает введенное значение
 		String brand = reader.readLine();
-
+		System.out.println("ВВедите модель");
 		reader = new BufferedReader(new InputStreamReader(System.in)); // читает введенное значение
 
 		String model = reader.readLine();
@@ -48,7 +49,8 @@ public class AddCar extends Command implements Serializable{
 	@Override
 	public void execute() throws IOException {
 		// TODO Auto-generated method stub
-
+		
 	}
+
 
 }

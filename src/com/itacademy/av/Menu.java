@@ -17,7 +17,7 @@ public abstract class Menu{
 		}
 
 		public void execute() throws IOException {
-			String s = "";
+			String s = null;
 			do {
 				System.out.println("Выберите необходимую комманду...");
 				for (Command command : LevelCommands) {
@@ -26,7 +26,7 @@ public abstract class Menu{
 				BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // читает введенное значение
 
 				// Reading data using readLine
-				String input = reader.readLine();
+				s = reader.readLine();
 				
 				for (Command command : LevelCommands) {
 					if (s.equals(command.getKey())) {

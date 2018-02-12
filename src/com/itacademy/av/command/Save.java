@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import com.itacademy.exel.dock.Document;
+import com.itacademy.av.Car;
 
 public abstract class Save extends Command implements Serializable{
 	private HashSet brand;
@@ -39,7 +39,7 @@ public abstract class Save extends Command implements Serializable{
 	public void loadFile() {
 		
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));) {
-			Document doc = (Document) ois.readObject();
+			Car doc = (Car) ois.readObject();
 			ois.close();
 			System.out.println(String.format("Документ %s открыт", fileName));
 		} catch (FileNotFoundException e) {

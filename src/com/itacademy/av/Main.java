@@ -16,14 +16,13 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		List<Command> topLevelCommands = new ArrayList<Command>();
-
-		topLevelCommands.add(new FindCar("1", "Искать машину"));
-		topLevelCommands.add(new AddCar("2", "Создать машину"));
-		topLevelCommands.add(new ExitProgram("0", "Выйти из программы"));
+		DB db = new DB();
+		topLevelCommands.add(new FindCar("Искать машину", "1"));
+		topLevelCommands.add(new AddCar("Создать машину","2"));
+		topLevelCommands.add(new ExitProgram("Выйти из программы","0"));
 		Menu menu = new Menu(topLevelCommands) {
 		};
 		menu.execute();
-		DB db = new DB();
 
 	}
 

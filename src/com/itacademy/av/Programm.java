@@ -28,22 +28,22 @@ public class Programm {
 	public void start() throws IOException {
 		while (true) {
 			System.out.println("Выберите необходимую комманду...");
-			for (Command command : topLevelCommands) {
+		/*	for (Command command : topLevelCommands) {
 				command.printMenuItem();
 			}
-
+*/
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // читает введенное значение
 
 			// Reading data using readLine
 			String input = reader.readLine();
 
-			for (Command command : topLevelCommands) {
+			/*for (Command command : topLevelCommands) {
 				if (command.isSelected(input)) {
-					execute();
+					execute();*/
 				}
 			}
-		}
-	}
+		
+	
 
 	private void execute() {
 		// TODO Auto-generated method stub
