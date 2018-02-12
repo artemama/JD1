@@ -3,6 +3,9 @@ package com.itacademy.av.command;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.itacademy.av.db.DB;
+
+
 public class FindCar extends Command {
 
 	public FindCar(String key, String name) {
@@ -12,6 +15,7 @@ public class FindCar extends Command {
 	private List<Command> secondLevelCommands = new ArrayList<>();
 
 	public void execute() {
+		
 
 	}
 

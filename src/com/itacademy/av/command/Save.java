@@ -13,9 +13,9 @@ import java.util.HashSet;
 import com.itacademy.av.Car;
 
 public abstract class Save extends Command implements Serializable{
-	private HashSet brand;
-	private HashMap model;
-	private String fileName = "tmpSave.txt";
+	private static HashSet brand;
+	private static HashMap model;
+	private static String fileName = "tmpSave.txt";
 
 	public Save(String title, String key, HashSet brand, HashMap model) {
 		super(title, key);
@@ -23,15 +23,15 @@ public abstract class Save extends Command implements Serializable{
 		this.model = model;
 	}
 
-	public void saveFile() {
+	public static void saveFile() {
 		try (FileOutputStream fos = new FileOutputStream(fileName);
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
-			oos.writeObject(this.brand);
-			oos.writeObject(this.model);
+			oos.writeObject(brand);
+			oos.writeObject(model);
 			oos.close();
-			System.out.println(String.format("File %s was saved.", fileName));
+			System.out.println(String.format("Файл %s сохранен.", fileName));
 		} catch (IOException e) {
-			System.out.println("Something was wrong. File wasn't saved. Please try again.");
+			System.out.println("Не получилось сохранить файл");
 		}
 
 	}
@@ -43,10 +43,10 @@ public abstract class Save extends Command implements Serializable{
 			ois.close();
 			System.out.println(String.format("Документ %s открыт", fileName));
 		} catch (FileNotFoundException e) {
-			System.out.println("File not found.");
+			System.out.println("Файл не найден.");
 			
 		} catch (Exception e) {
-			System.out.println("Something is wrong.");
+			System.out.println("Не получилось открыть файл.");
 		}
 		
 	}

@@ -8,7 +8,6 @@ import com.itacademy.av.command.AddCar;
 import com.itacademy.av.command.Command;
 import com.itacademy.av.command.ExitProgram;
 import com.itacademy.av.command.FindCar;
-import com.itacademy.av.db.DB;
 import com.itacademy.av.Menu;
 
 public class Main {
@@ -16,7 +15,6 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		List<Command> topLevelCommands = new ArrayList<Command>();
-		DB db = new DB();
 		topLevelCommands.add(new FindCar("Искать машину", "1"));
 		topLevelCommands.add(new AddCar("Создать машину","2"));
 		topLevelCommands.add(new ExitProgram("Выйти из программы","0"));

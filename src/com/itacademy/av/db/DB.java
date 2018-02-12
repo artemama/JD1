@@ -19,15 +19,73 @@ public class DB implements Serializable {
 	private String[] bmw = { "318i", "525tds", "m750" };
 	private HashSet<String> brands = new HashSet<String>(Arrays.asList(brand)); // коллекция Брендов
 	private HashSet<String> audis = new HashSet<String>(Arrays.asList(audi));
+
 	private HashSet<String> vws = new HashSet<String>(Arrays.asList(vw));
 	private HashSet<String> bmws = new HashSet<String>(Arrays.asList(bmw));
 	private HashMap<String, Object> models = new HashMap<>(); // мапа бренд-модель
 	private List<Car> cars = new ArrayList<>();
-
+	
 	public void fillDB() {
 		models.put("Audi", getAudis());
 		models.put("VW", getVws());
 		models.put("BMW", getBmws());
+	}
+
+	public void printBrands() { // вывести все брэнды
+		Iterator<String> itr = brands.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next().toString());
+		}
+		
+	}
+	
+	public int size() {
+		int i = models.size();
+		return i;
+	}
+	public String[] getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String[] brand) {
+		this.brand = brand;
+	}
+
+	public String[] getAudi() {
+		return audi;
+	}
+
+	public void setAudi(String[] audi) {
+		this.audi = audi;
+	}
+
+	public String[] getVw() {
+		return vw;
+	}
+
+	public void setVw(String[] vw) {
+		this.vw = vw;
+	}
+
+	public String[] getBmw() {
+		return bmw;
+	}
+
+	public void setBmw(String[] bmw) {
+		this.bmw = bmw;
+	}
+
+	public HashMap<String, Object> getModels() {
+		return models;
+	}
+
+	public void setModels(HashMap<String, Object> models) {
+		this.models = models;
+	}
+
+
+	public boolean add(String e) {
+		return brands.add(e);
 	}
 
 	public HashSet<String> getAudis() {
@@ -75,16 +133,4 @@ public class DB implements Serializable {
 		super();
 	}
 
-	public void printBrands() { // вывести все брэнды
-		Iterator<String> itr = brands.iterator();
-		while (itr.hasNext()) {
-			System.out.println(itr.next().toString());
-		}
-
-	}
-
-	public int size() {
-		int i = models.size();
-		return i;
-	}
 }
