@@ -1,5 +1,6 @@
 package com.itacademy.av.command;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -36,7 +37,7 @@ public abstract class Save extends Command implements Serializable{
 
 	}
 	
-	public void loadFile() {
+	public static void loadFile() {
 		
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));) {
 			Car doc = (Car) ois.readObject();
@@ -44,6 +45,12 @@ public abstract class Save extends Command implements Serializable{
 			System.out.println(String.format("Документ %s открыт", fileName));
 		} catch (FileNotFoundException e) {
 			System.out.println("Файл не найден.");
+			
+			String pathToFile = "/" + "tmpSave.txt";
+			File file = new File(pathToFile);
+			file.mkdirs();
+			
+			Save.loadFile();
 			
 		} catch (Exception e) {
 			System.out.println("Не получилось открыть файл.");
