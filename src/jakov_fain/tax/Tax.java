@@ -1,4 +1,4 @@
-package jakov_fain;
+package jakov_fain.tax;
 
 class Tax {
 

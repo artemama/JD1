@@ -1,4 +1,4 @@
-package jakov_fain;
+package jakov_fain.tax;
 
 public class NJTax extends Tax {
 	NJTax(double gi, String st, int depen) {
