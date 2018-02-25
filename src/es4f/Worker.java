@@ -26,8 +26,10 @@ import org.xml.sax.SAXException;
 
 public class Worker {
 
-	private static final String FILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000083.xml";
-	private static final String UPDATRFILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000001.xml";
+	private static String path;
+	private static final String FILENAME = stringJava(path);
+	//private static final String FILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000083.xml";
+	private static final String UPDATEFILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000001.xml";
 
 	public static void main(String[] args) {
 		try {
@@ -89,7 +91,7 @@ public class Worker {
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 			DOMSource source = new DOMSource(doc);
-			StreamResult result = new StreamResult(new File(UPDATRFILENAME));
+			StreamResult result = new StreamResult(new File(UPDATEFILENAME));
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.transform(source, result);
 			System.out.println("XML успешно изменен!");
@@ -102,5 +104,17 @@ public class Worker {
 			Logger.getLogger(Worker.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
+	}
+	// меняем /
+	public static String stringJava (String path) { 
+	    String filePath = "";
+	    for (int i = 0; i < path.length(); i++) {
+	        if (path.charAt(i) == '\\') {
+	            filePath += '/';
+	        } else {
+	            filePath += path.charAt(i);
+	        }
+	    }
+	    return filePath;
 	}
 }

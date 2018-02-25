@@ -3,7 +3,10 @@ package es4f;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		String s = null;
+		View view = new View(s);
+		view.createGUI();
 
 	}
 
