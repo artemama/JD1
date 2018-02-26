@@ -3,10 +3,18 @@ package es4f;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Handler implements ActionListener{
+import javax.swing.JButton;
 
-	@Override
+public class Handler implements ActionListener{
+	
+	View parant;
+
+	public Handler(View view) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void actionPerformed(ActionEvent e) {
+		JButton clickedButon = (JButton) e.getSource();
 		
 	}
 

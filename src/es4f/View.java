@@ -64,12 +64,7 @@ public class View extends JFrame {
 		frame.setVisible(true);
 	}
 
-	public class Handler implements ActionListener {
-
-		public void actionPerformed(ActionEvent e) {
-
-		}
-
-	}
+	Handler handler = new Handler(this);
+	go.addActionListener (Handler);
 
 }
