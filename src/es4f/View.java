@@ -62,9 +62,11 @@ public class View extends JFrame {
 		// 7. set the size and make the window visible
 		frame.setSize(500, 180);
 		frame.setVisible(true);
+		
+		Handler handler = new Handler(this);
+		go.addActionListener (handler);
 	}
 
-	Handler handler = new Handler(this);
-	go.addActionListener (Handler);
+	
 
 }
