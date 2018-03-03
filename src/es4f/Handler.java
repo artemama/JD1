@@ -4,18 +4,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 
 public class Handler implements ActionListener{
 	
-	View parant;
-
 	public Handler(View view) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		JButton clickedButon = (JButton) e.getSource();
-		
+		e.getSource();
+		Worker worker = new Worker();
+		worker.go();
 	}
 
 }

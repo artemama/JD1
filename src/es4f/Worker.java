@@ -1,10 +1,22 @@
 package es4f;
 
-import java.awt.event.ItemEvent;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
+ 
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -26,12 +38,15 @@ import org.xml.sax.SAXException;
 
 public class Worker {
 
-	private static String path;
-	private static final String FILENAME = stringJava(path);
-	//private static final String FILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000083.xml";
+	//private static String path;
+	//private final static String FILENAME = stringJava(path);
+	private static final String FILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000083.xml";
 	private static final String UPDATEFILENAME = "e:\\Dropbox\\My Files\\_Java\\ES4F\\invoice-590683035-2018-0000000001.xml";
+	
+	
+	
 
-	public static void main(String[] args) {
+	public static void go () {
 		try {
 			// Строим объектную модель исходного XML файла
 			final String filepath = FILENAME;
@@ -105,16 +120,8 @@ public class Worker {
 		}
 
 	}
-	// меняем /
-	public static String stringJava (String path) { 
-	    String filePath = "";
-	    for (int i = 0; i < path.length(); i++) {
-	        if (path.charAt(i) == '\\') {
-	            filePath += '/';
-	        } else {
-	            filePath += path.charAt(i);
-	        }
-	    }
-	    return filePath;
-	}
+
+
+
+
 }

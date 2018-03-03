@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class View extends JFrame {
 	public View(String s) {
@@ -17,12 +18,13 @@ public class View extends JFrame {
 		JPanel windowContent = new JPanel();
 
 		// 2. Set a layout manager for this panel
-		GridLayout gl = new GridLayout(7, 2);
+		GridLayout gl = new GridLayout(9, 2);
 		windowContent.setLayout(gl);
 
 		// 3. Create controls in memory
-		JLabel label0 = new JLabel("Введи адрес файла");
-		JTextField field0 = new JTextField(250);
+		JLabel label0 = new JLabel("Открыть файл");
+		JButton btnFile = new JButton(". . .");
+		/*JTextField field0 = new JTextField(250);*/
 		JLabel label1 = new JLabel("Введи номер ЭСЧФ:");
 		JTextField field1 = new JTextField(50);
 		JLabel label2 = new JLabel("Дата к зачету ЭСЧФ гггг-мм-дд:");
@@ -35,10 +37,13 @@ public class View extends JFrame {
 		JButton go = new JButton("Run");
 		JLabel labelRes = new JLabel("Результат обработки");
 		JLabel result = new JLabel("");
+		JFileChooser fc = new JFileChooser();
+		JTextField txtFile = new JTextField();
+	    File file;
 
 		// 4. Add controls to the panel
 		windowContent.add(label0);
-		windowContent.add(field0);
+		windowContent.add(btnFile);
 		windowContent.add(label1);
 		windowContent.add(field1);
 		windowContent.add(label2);
@@ -62,9 +67,34 @@ public class View extends JFrame {
 		// 7. set the size and make the window visible
 		frame.setSize(500, 180);
 		frame.setVisible(true);
-	}
+		
+		//вызываем слушателя "go"		
+		Handler handler = new Handler(this);
+		go.addActionListener (handler);
+		
+		btnFile.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                onChooseFile(evt);
+            }
 
-	Handler handler = new Handler(this);
-	go.addActionListener (Handler);
+			private void onChooseFile(ActionEvent evt) {
+				// TODO Auto-generated method stub
+				if (evt.getSource() == btnFile) {
+		            int returnVal = fc.showOpenDialog(btnFile);
+		            if (returnVal == JFileChooser.APPROVE_OPTION){
+		                //file = fc.getSelectedFile();
+		                //txtFile.setText(file.getAbsolutePath());
+		            }
+		        }
+			}
+        });
+		
+		
+		
+	}
+	
+	
+
+	
 
 }
