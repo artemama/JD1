@@ -68,6 +68,7 @@ public class View extends JFrame {
 		frame.setSize(500, 180);
 		frame.setVisible(true);
 		
+<<<<<<< HEAD
 		//вызываем слушателя "go"		
 		Handler handler = new Handler(this);
 		go.addActionListener (handler);
@@ -91,6 +92,10 @@ public class View extends JFrame {
 		
 		
 		
+=======
+		Handler handler = new Handler(this);
+		go.addActionListener (handler);
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
 	}
 	
 	

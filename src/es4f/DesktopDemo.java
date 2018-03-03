@@ -86,10 +86,17 @@ public class DesktopDemo extends JFrame {
             // now enable buttons for actions that are supported.
             enableSupportedActions();
         }
+<<<<<<< HEAD
       /*  loadFrameIcon();*/
         setResizable(false);
     }
     
+=======
+        loadFrameIcon();
+        setResizable(false);
+    }
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     public static void main(String args[]) {
         /* Use an appropriate Look and Feel */
         try {
@@ -115,11 +122,19 @@ public class DesktopDemo extends JFrame {
             }
         });
     }
+<<<<<<< HEAD
     
     /** Create and show components
      */
     private void initComponents() {
         
+=======
+     
+    /** Create and show components
+     */
+    private void initComponents() {
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("DesktopDemo");
         txtBrowserURI.addActionListener(new ActionListener() {
@@ -127,65 +142,106 @@ public class DesktopDemo extends JFrame {
                 onLaunchBrowser(null);
             }
         });
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         btnLaunchBrowser.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onLaunchBrowser(evt);
             }
         });
+<<<<<<< HEAD
         
         
+=======
+         
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         txtMailTo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onLaunchMail(null);
             }
         });
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         btnLaunchEmail.setText("Launch Mail");
         btnLaunchEmail.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onLaunchMail(evt);
             }
         });
+<<<<<<< HEAD
         
         
+=======
+         
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         txtFile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onLaunchDefaultApplication(null);
             }
         });
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         rbOpen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onOpenAction(evt);
             }
         });
+<<<<<<< HEAD
         
         
+=======
+         
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         rbEdit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onEditAction(evt);
             }
         });
+<<<<<<< HEAD
         
         
+=======
+         
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         rbPrint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onPrintAction(evt);
             }
         });
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         btnLaunchApplication.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onLaunchDefaultApplication(evt);
             }
         });
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         btnFile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onChooseFile(evt);
             }
         });
+<<<<<<< HEAD
         
         Container conFrame = this.getContentPane();
         
@@ -195,21 +251,44 @@ public class DesktopDemo extends JFrame {
         
         // Components layouting
         
+=======
+         
+        Container conFrame = this.getContentPane();
+         
+        bgAppAction.add(rbOpen);
+        bgAppAction.add(rbEdit);
+        bgAppAction.add(rbPrint);
+         
+        // Components layouting
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout layout = new GroupLayout(conFrame);
         conFrame.setLayout(layout);
         layout.setAutoCreateContainerGaps(true);
         layout.setAutoCreateGaps(true);
+<<<<<<< HEAD
         
         GroupLayout.SequentialGroup majorHGroup = layout.createSequentialGroup();
         
         // Horizontal group
         
+=======
+         
+        GroupLayout.SequentialGroup majorHGroup = layout.createSequentialGroup();
+         
+        // Horizontal group
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup lblHGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING);
         lblHGroup.addComponent(lblBrowserUri, GroupLayout.Alignment.TRAILING);
         lblHGroup.addComponent(lblMailRecipient, GroupLayout.Alignment.TRAILING);
         lblHGroup.addComponent(lblFile, GroupLayout.Alignment.TRAILING);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup txtFieldsHGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING);
         txtFieldsHGroup.addComponent(txtMailTo);
@@ -223,12 +302,17 @@ public class DesktopDemo extends JFrame {
         fileHGroup.addComponent(txtFile);
         fileHGroup.addComponent(btnFile);
         txtFieldsHGroup.addGroup(fileHGroup);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup btnHGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING);
         btnHGroup.addComponent(btnLaunchBrowser);
         btnHGroup.addComponent(btnLaunchEmail);
         btnHGroup.addComponent(btnLaunchApplication);
+<<<<<<< HEAD
         
         majorHGroup.addGroup(lblHGroup);
         majorHGroup.addGroup(txtFieldsHGroup);
@@ -240,35 +324,65 @@ public class DesktopDemo extends JFrame {
         
         GroupLayout.SequentialGroup majorVGroup = layout.createSequentialGroup();
         
+=======
+         
+        majorHGroup.addGroup(lblHGroup);
+        majorHGroup.addGroup(txtFieldsHGroup);
+        majorHGroup.addGroup(btnHGroup);
+         
+        layout.setHorizontalGroup(majorHGroup);
+         
+        // Vertical group
+         
+        GroupLayout.SequentialGroup majorVGroup = layout.createSequentialGroup();
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup uriVGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE);
         uriVGroup.addComponent(lblBrowserUri);
         uriVGroup.addComponent(txtBrowserURI);
         uriVGroup.addComponent(btnLaunchBrowser);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup mailVGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE);
         mailVGroup.addComponent(lblMailRecipient);
         mailVGroup.addComponent(txtMailTo);
         mailVGroup.addComponent(btnLaunchEmail);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup rbVGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE);
         rbVGroup.addComponent(rbOpen);
         rbVGroup.addComponent(rbEdit);
         rbVGroup.addComponent(rbPrint);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         GroupLayout.ParallelGroup fileVGroup =
                 layout.createParallelGroup(GroupLayout.Alignment.BASELINE);
         fileVGroup.addComponent(lblFile);
         fileVGroup.addComponent(btnLaunchApplication);
         fileVGroup.addComponent(txtFile);
         fileVGroup.addComponent(btnFile);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         majorVGroup.addGroup(uriVGroup);
         majorVGroup.addGroup(mailVGroup);
         majorVGroup.addGroup(rbVGroup);
         majorVGroup.addGroup(fileVGroup);
+<<<<<<< HEAD
         
         layout.setVerticalGroup(majorVGroup);
         
@@ -282,12 +396,32 @@ public class DesktopDemo extends JFrame {
         URL imgUrl = null;
         ImageIcon imgIcon = null;
         
+=======
+         
+        layout.setVerticalGroup(majorVGroup);
+         
+        pack();
+    }
+     
+    /**
+     * Load the "desktop" icon into our frame window.
+     */
+    private void loadFrameIcon() {
+        URL imgUrl = null;
+        ImageIcon imgIcon = null;
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         imgUrl = DesktopDemo.class.getResource("images/desk32.gif");
         imgIcon = new ImageIcon(imgUrl);
         Image img = imgIcon.getImage();
         this.setIconImage(img);
+<<<<<<< HEAD
     }*/
     
+=======
+    }
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /*
      * Set the Desktop.Action to PRINT before invoking
      * the default application.
@@ -295,7 +429,11 @@ public class DesktopDemo extends JFrame {
     private void onPrintAction(ActionEvent evt) {
         action = Desktop.Action.PRINT;
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Set the Desktop.Action to EDIT before invoking
      * the default application.
@@ -303,7 +441,11 @@ public class DesktopDemo extends JFrame {
     private void onEditAction(ActionEvent evt) {
         action = Desktop.Action.EDIT;
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Set the Desktop.Action to OPEN before invoking
      * the default application.
@@ -311,7 +453,11 @@ public class DesktopDemo extends JFrame {
     private void onOpenAction(ActionEvent evt) {
         action = Desktop.Action.OPEN;
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Launch the default application associated with a specific
      * filename using the preset Desktop.Action.
@@ -320,7 +466,11 @@ public class DesktopDemo extends JFrame {
     private void onLaunchDefaultApplication(ActionEvent evt) {
         String fileName = txtFile.getText();
         File file = new File(fileName);
+<<<<<<< HEAD
         
+=======
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         try {
             switch(action) {
                 case OPEN:
@@ -338,7 +488,11 @@ public class DesktopDemo extends JFrame {
             System.out.println("Cannot perform the given operation to the " + file + " file");
         }
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Launch the default email client using the "mailto"
      * protocol and the text supplied by the user.
@@ -360,7 +514,11 @@ public class DesktopDemo extends JFrame {
             use.printStackTrace();
         }
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Launch the default browser with the text provided by the
      * user.
@@ -379,7 +537,11 @@ public class DesktopDemo extends JFrame {
             //use.printStackTrace();
         }
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     private void onChooseFile(ActionEvent evt) {
         if (evt.getSource() == btnFile) {
             int returnVal = fc.showOpenDialog(DesktopDemo.this);
@@ -389,13 +551,21 @@ public class DesktopDemo extends JFrame {
             }
         }
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Enable actions that are supported on this host.
      * The actions are: open browser, open email client, and
      * open, edit, and print files using their associated application
      */
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     private void enableSupportedActions() {
         if (desktop.isSupported(Desktop.Action.BROWSE)) {
             txtBrowserURI.setEnabled(true);
@@ -420,7 +590,11 @@ public class DesktopDemo extends JFrame {
             btnFile.setEnabled(true);
         }
     }
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
     /**
      * Disable all graphical components until we know
      * whether their functionality is supported.
@@ -428,6 +602,7 @@ public class DesktopDemo extends JFrame {
     private void disableActions() {
         txtBrowserURI.setEnabled(false);
         btnLaunchBrowser.setEnabled(false);
+<<<<<<< HEAD
         
         txtMailTo.setEnabled(false);
         btnLaunchEmail.setEnabled(false);
@@ -436,9 +611,22 @@ public class DesktopDemo extends JFrame {
         rbOpen.setEnabled(false);
         rbPrint.setEnabled(false);
         
+=======
+         
+        txtMailTo.setEnabled(false);
+        btnLaunchEmail.setEnabled(false);
+         
+        rbEdit.setEnabled(false);
+        rbOpen.setEnabled(false);
+        rbPrint.setEnabled(false);
+         
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
         txtFile.setEnabled(false);
         btnLaunchApplication.setEnabled(false);
         btnFile.setEnabled(false);
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
