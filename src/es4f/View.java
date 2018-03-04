@@ -68,7 +68,7 @@ public class View extends JFrame {
 		frame.setSize(500, 180);
 		frame.setVisible(true);
 		
-<<<<<<< HEAD
+
 		//вызываем слушателя "go"		
 		Handler handler = new Handler(this);
 		go.addActionListener (handler);
@@ -76,6 +76,11 @@ public class View extends JFrame {
 		btnFile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onChooseFile(evt);
+                field1.getText(); //номер ЭСЧФ
+                field2.getText(); //Дата к зачету ЭСЧФ
+                field3.getText(); //номер Invoice
+                field4.getText(); //Дата Invoice
+                
             }
 
 			private void onChooseFile(ActionEvent evt) {
@@ -88,18 +93,4 @@ public class View extends JFrame {
 		            }
 		        }
 			}
-        });
-		
-		
-		
-=======
-		Handler handler = new Handler(this);
-		go.addActionListener (handler);
->>>>>>> 217e7fe4d6d8ebc1965789b03c25e32eca470a2b
-	}
-	
-	
-
-	
-
-}
+        ;});}}
